@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Wrappa"
+      name = "Wrappa">
+      <FileRef
+         location = "group:Wrappa.h">
+      </FileRef>
+      <Group
+         location = "group:Wrappers"
+         name = "Wrappers">
+         <Group
+            location = "group:UITableView"
+            name = "UITableView">
+            <Group
+               location = "group:Categories"
+               name = "Categories">
+               <FileRef
+                  location = "group:UITableView+Wrappa.h">
+               </FileRef>
+               <FileRef
+                  location = "group:UITableView+Wrappa.m">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Cells"
+               name = "Cells">
+               <FileRef
+                  location = "group:WRTableCell.h">
+               </FileRef>
+               <FileRef
+                  location = "group:WRTableCell.m">
+               </FileRef>
+               <FileRef
+                  location = "group:WRTableCell.xib">
+               </FileRef>
+               <FileRef
+                  location = "group:WRTableCellProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:/Users/zakhej/Wrappa/Wrappa/Wrappers/UITableView/Cells/WRTableCellSource.h">
+               </FileRef>
+               <FileRef
+                  location = "group:/Users/zakhej/Wrappa/Wrappa/Wrappers/UITableView/Cells/WRTableCellSource.m">
+               </FileRef>
+               <FileRef
+                  location = "group:WRTableCellSourceProtocol.h">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:WRTableSection.h">
+            </FileRef>
+            <FileRef
+               location = "group:WRTableSection.m">
+            </FileRef>
+            <FileRef
+               location = "group:WRTableSource.h">
+            </FileRef>
+            <FileRef
+               location = "group:WRTableSource.m">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:Examples/Wrappa Example/Wrappa Example.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Tests/Wrappa Tests/Wrappa Tests.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Examples/Wrappa Example/Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
