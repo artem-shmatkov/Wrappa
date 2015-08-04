@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1475A23092E706510ADFD3A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F2ADA9BAF9C9CBCF8D8740 /* Images.xcassets */; };
+		2EAF7BF2232056B8C82CEA79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6356392ECEB9D5944A0E1B4C /* main.m */; };
+		78228CB95BFADF8F2B7C32A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A05E3B52B838D8047DDD5115 /* libPods.a */; };
+		846DCAB447EDDFB02E10948C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6336057FAD9878956473F /* AppDelegate.m */; };
+		E048290C1B6E978200E3A679 /* WRTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E048290B1B6E978200E3A679 /* WRTableSource.m */; };
+		E04829101B6E986A00E3A679 /* UITableView+Wrappa.m in Sources */ = {isa = PBXBuildFile; fileRef = E048290F1B6E986A00E3A679 /* UITableView+Wrappa.m */; };
+		E04829181B6EB26600E3A679 /* WRWrappaView.m in Sources */ = {isa = PBXBuildFile; fileRef = E04829171B6EB26600E3A679 /* WRWrappaView.m */; };
+		E048291E1B6EB3CE00E3A679 /* WRTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E048291A1B6EB3CE00E3A679 /* WRTextCell.m */; };
+		E048291F1B6EB3CE00E3A679 /* WRTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E048291B1B6EB3CE00E3A679 /* WRTextCell.xib */; };
+		E04829201B6EB3CE00E3A679 /* WRTextCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E048291D1B6EB3CE00E3A679 /* WRTextCellSource.m */; };
+		E04829251B6F9BF700E3A679 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04829241B6F9BF700E3A679 /* Storyboard.storyboard */; };
+		E0E9CE401B6E579600934684 /* WRWrappaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CE3F1B6E579600934684 /* WRWrappaViewController.m */; };
+		E0E9CE551B6E584600934684 /* WRTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CE471B6E584600934684 /* WRTableCell.m */; };
+		E0E9CE571B6E584600934684 /* WRTableCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CE4B1B6E584600934684 /* WRTableCellSource.m */; };
+		E0E9CE581B6E584600934684 /* WRTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CE4E1B6E584600934684 /* WRTableSection.m */; };
+		E1D5406B933B7233E615C689 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA447B849250EF9AB8C1D5B /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AA447B849250EF9AB8C1D5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3A9A1AFAC989390B1D216798 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6356392ECEB9D5944A0E1B4C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E55923598C88AD7DCAAD4C4 /* Wrappa Example-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Wrappa Example-Prefix.pch"; sourceTree = "<group>"; };
+		783AADB44FC9A44FC32838D2 /* Wrappa Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wrappa Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C244E63A025AC8EB4D53CCB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A05E3B52B838D8047DDD5115 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D6336057FAD9878956473F /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E048290A1B6E978200E3A679 /* WRTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableSource.h; sourceTree = "<group>"; };
+		E048290B1B6E978200E3A679 /* WRTableSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTableSource.m; sourceTree = "<group>"; };
+		E048290E1B6E986A00E3A679 /* UITableView+Wrappa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Wrappa.h"; sourceTree = "<group>"; };
+		E048290F1B6E986A00E3A679 /* UITableView+Wrappa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Wrappa.m"; sourceTree = "<group>"; };
+		E04829161B6EB26600E3A679 /* WRWrappaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRWrappaView.h; sourceTree = "<group>"; };
+		E04829171B6EB26600E3A679 /* WRWrappaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRWrappaView.m; sourceTree = "<group>"; };
+		E04829191B6EB3CE00E3A679 /* WRTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTextCell.h; sourceTree = "<group>"; };
+		E048291A1B6EB3CE00E3A679 /* WRTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTextCell.m; sourceTree = "<group>"; };
+		E048291B1B6EB3CE00E3A679 /* WRTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WRTextCell.xib; sourceTree = "<group>"; };
+		E048291C1B6EB3CE00E3A679 /* WRTextCellSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTextCellSource.h; sourceTree = "<group>"; };
+		E048291D1B6EB3CE00E3A679 /* WRTextCellSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTextCellSource.m; sourceTree = "<group>"; };
+		E04829241B6F9BF700E3A679 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		E0E9CE3E1B6E579600934684 /* WRWrappaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRWrappaViewController.h; sourceTree = "<group>"; };
+		E0E9CE3F1B6E579600934684 /* WRWrappaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRWrappaViewController.m; sourceTree = "<group>"; };
+		E0E9CE421B6E584600934684 /* Wrappa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wrappa.h; sourceTree = "<group>"; };
+		E0E9CE461B6E584600934684 /* WRTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableCell.h; sourceTree = "<group>"; };
+		E0E9CE471B6E584600934684 /* WRTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTableCell.m; sourceTree = "<group>"; };
+		E0E9CE491B6E584600934684 /* WRTableCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableCellProtocol.h; sourceTree = "<group>"; };
+		E0E9CE4A1B6E584600934684 /* WRTableCellSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableCellSource.h; sourceTree = "<group>"; };
+		E0E9CE4B1B6E584600934684 /* WRTableCellSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTableCellSource.m; sourceTree = "<group>"; };
+		E0E9CE4C1B6E584600934684 /* WRTableCellSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableCellSourceProtocol.h; sourceTree = "<group>"; };
+		E0E9CE4D1B6E584600934684 /* WRTableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableSection.h; sourceTree = "<group>"; };
+		E0E9CE4E1B6E584600934684 /* WRTableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTableSection.m; sourceTree = "<group>"; };
+		E7F2ADA9BAF9C9CBCF8D8740 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F9072A87822CE26BAB00EC63 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FF07559CC397BACF8EABC706 /* Wrappa Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Wrappa Example-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E93B62A4A67269D49E67A204 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D5406B933B7233E615C689 /* Foundation.framework in Frameworks */,
+				78228CB95BFADF8F2B7C32A6 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		105EE0251527D372798B53B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E04829241B6F9BF700E3A679 /* Storyboard.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		161C7DBFE0329DE187D60019 = {
+			isa = PBXGroup;
+			children = (
+				473C83743C9A186C886B6E95 /* Wrappa Example */,
+				A930A685A52ED2C69418F596 /* Frameworks */,
+				D0C8C873D82185BDB6AA240C /* Products */,
+				3D297BE159ADEE8E2714D7CB /* Pods */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		1C0B811DA7198C930326B876 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A1AFAC989390B1D216798 /* AppDelegate.h */,
+				C8D6336057FAD9878956473F /* AppDelegate.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		21C5949DDFE91FE1C8ECDA5F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				E0E9CE411B6E584600934684 /* Wrappa */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		240CC61D60CBAF072FA4AD0F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E7F2ADA9BAF9C9CBCF8D8740 /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		24B3C83308CF2A6B05099983 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0AA447B849250EF9AB8C1D5B /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3D297BE159ADEE8E2714D7CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9072A87822CE26BAB00EC63 /* Pods.release.xcconfig */,
+				9C244E63A025AC8EB4D53CCB /* Pods.debug.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		473C83743C9A186C886B6E95 /* Wrappa Example */ = {
+			isa = PBXGroup;
+			children = (
+				BF19C8B5C96D0BDBB5BFC922 /* Code */,
+				B727DA6FD359D6237AE84176 /* Resources */,
+				EFD64E2F44AB9E0E530AB2B9 /* Supporting Files */,
+			);
+			path = "Wrappa Example";
+			sourceTree = "<group>";
+		};
+		78E54A5C6BE0AF1D89D20D16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E048291B1B6EB3CE00E3A679 /* WRTextCell.xib */,
+				E04829191B6EB3CE00E3A679 /* WRTextCell.h */,
+				E048291A1B6EB3CE00E3A679 /* WRTextCell.m */,
+				E048291C1B6EB3CE00E3A679 /* WRTextCellSource.h */,
+				E048291D1B6EB3CE00E3A679 /* WRTextCellSource.m */,
+				E04829161B6EB26600E3A679 /* WRWrappaView.h */,
+				E04829171B6EB26600E3A679 /* WRWrappaView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88F613FB3AA4E880F9259ACF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0E9CE3E1B6E579600934684 /* WRWrappaViewController.h */,
+				E0E9CE3F1B6E579600934684 /* WRWrappaViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A930A685A52ED2C69418F596 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24B3C83308CF2A6B05099983 /* iOS */,
+				A05E3B52B838D8047DDD5115 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B727DA6FD359D6237AE84176 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				240CC61D60CBAF072FA4AD0F /* Images */,
+				105EE0251527D372798B53B0 /* Storyboards */,
+				F7D31E8BE18A9DA97316BA49 /* Other */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF19C8B5C96D0BDBB5BFC922 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				1C0B811DA7198C930326B876 /* Delegates */,
+				21C5949DDFE91FE1C8ECDA5F /* Libraries */,
+				88F613FB3AA4E880F9259ACF /* ViewControllers */,
+				78E54A5C6BE0AF1D89D20D16 /* Views */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		D0C8C873D82185BDB6AA240C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				783AADB44FC9A44FC32838D2 /* Wrappa Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E048290D1B6E985400E3A679 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E048290E1B6E986A00E3A679 /* UITableView+Wrappa.h */,
+				E048290F1B6E986A00E3A679 /* UITableView+Wrappa.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		E0E9CE411B6E584600934684 /* Wrappa */ = {
+			isa = PBXGroup;
+			children = (
+				E0E9CE421B6E584600934684 /* Wrappa.h */,
+				E0E9CE431B6E584600934684 /* Wrappers */,
+			);
+			name = Wrappa;
+			path = ../../../../../Wrappa;
+			sourceTree = "<group>";
+		};
+		E0E9CE431B6E584600934684 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				E0E9CE441B6E584600934684 /* UITableView */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		E0E9CE441B6E584600934684 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				E048290D1B6E985400E3A679 /* Categories */,
+				E0E9CE451B6E584600934684 /* Cells */,
+				E048290A1B6E978200E3A679 /* WRTableSource.h */,
+				E048290B1B6E978200E3A679 /* WRTableSource.m */,
+				E0E9CE4D1B6E584600934684 /* WRTableSection.h */,
+				E0E9CE4E1B6E584600934684 /* WRTableSection.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		E0E9CE451B6E584600934684 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E0E9CE461B6E584600934684 /* WRTableCell.h */,
+				E0E9CE471B6E584600934684 /* WRTableCell.m */,
+				E0E9CE4A1B6E584600934684 /* WRTableCellSource.h */,
+				E0E9CE4B1B6E584600934684 /* WRTableCellSource.m */,
+				E0E9CE491B6E584600934684 /* WRTableCellProtocol.h */,
+				E0E9CE4C1B6E584600934684 /* WRTableCellSourceProtocol.h */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EFD64E2F44AB9E0E530AB2B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF07559CC397BACF8EABC706 /* Wrappa Example-Info.plist */,
+				6E55923598C88AD7DCAAD4C4 /* Wrappa Example-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7D31E8BE18A9DA97316BA49 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				6356392ECEB9D5944A0E1B4C /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A41929C7B4A3B343F1CAAF4F /* Wrappa Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F173103AEBFAE1BFDB13AA /* Build configuration list for PBXNativeTarget "Wrappa Example" */;
+			buildPhases = (
+				AD23E5F8FE7A38AA343AACBE /* Check Pods Manifest.lock */,
+				5CA211FAC4A3C259C2D38D2E /* Sources */,
+				E93B62A4A67269D49E67A204 /* Frameworks */,
+				A4A3DC7B1353EAFBFFD28F82 /* Resources */,
+				D46535582A62B5251EAC5B90 /* Copy Pods Resources */,
+				D0986AD8DC31B88D61508B72 /* Warn for TODO and FIXME comments */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wrappa Example";
+			productName = "Wrappa Example";
+			productReference = 783AADB44FC9A44FC32838D2 /* Wrappa Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F727F25EDE9ED6EE19AB42BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "";
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = zakhej.com;
+			};
+			buildConfigurationList = 423A4EBE41578256CDE9AF23 /* Build configuration list for PBXProject "Wrappa Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 161C7DBFE0329DE187D60019;
+			productRefGroup = D0C8C873D82185BDB6AA240C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A41929C7B4A3B343F1CAAF4F /* Wrappa Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4A3DC7B1353EAFBFFD28F82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1475A23092E706510ADFD3A1 /* Images.xcassets in Resources */,
+				E048291F1B6EB3CE00E3A679 /* WRTextCell.xib in Resources */,
+				E04829251B6F9BF700E3A679 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AD23E5F8FE7A38AA343AACBE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D0986AD8DC31B88D61508B72 /* Warn for TODO and FIXME comments */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warn for TODO and FIXME comments";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"swift|h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/Carthage\" -o -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+		D46535582A62B5251EAC5B90 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CA211FAC4A3C259C2D38D2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E04829201B6EB3CE00E3A679 /* WRTextCellSource.m in Sources */,
+				846DCAB447EDDFB02E10948C /* AppDelegate.m in Sources */,
+				E048291E1B6EB3CE00E3A679 /* WRTextCell.m in Sources */,
+				E0E9CE581B6E584600934684 /* WRTableSection.m in Sources */,
+				E0E9CE551B6E584600934684 /* WRTableCell.m in Sources */,
+				E04829181B6EB26600E3A679 /* WRWrappaView.m in Sources */,
+				2EAF7BF2232056B8C82CEA79 /* main.m in Sources */,
+				E04829101B6E986A00E3A679 /* UITableView+Wrappa.m in Sources */,
+				E048290C1B6E978200E3A679 /* WRTableSource.m in Sources */,
+				E0E9CE401B6E579600934684 /* WRWrappaViewController.m in Sources */,
+				E0E9CE571B6E584600934684 /* WRTableCellSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		00B74B4F8C362EDC2ACB34FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9072A87822CE26BAB00EC63 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wrappa Example/Supporting Files/Wrappa Example-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INFOPLIST_FILE = "Wrappa Example/Supporting Files/Wrappa Example-Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7D7A52DEE1313464791C8D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B96ECA938AC8709376E1F4C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C244E63A025AC8EB4D53CCB /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wrappa Example/Supporting Files/Wrappa Example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Wrappa Example/Supporting Files/Wrappa Example-Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F37E1BCFF5E1384C7F1464F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		423A4EBE41578256CDE9AF23 /* Build configuration list for PBXProject "Wrappa Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7D7A52DEE1313464791C8D5 /* Debug */,
+				F37E1BCFF5E1384C7F1464F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F173103AEBFAE1BFDB13AA /* Build configuration list for PBXNativeTarget "Wrappa Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B74B4F8C362EDC2ACB34FB /* Release */,
+				B96ECA938AC8709376E1F4C9 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F727F25EDE9ED6EE19AB42BC /* Project object */;
+}
