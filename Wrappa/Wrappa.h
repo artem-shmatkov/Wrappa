@@ -28,6 +28,10 @@
 
 #import "WRTableSource.h"
 #import "WRTableSection.h"
+#import "WRTableCell.h"
+#import "WRTableCellSource.h"
+#import "WRTableCellProtocol.h"
+#import "WRTableCellSourceProtocol.h"
 #import "UITableView+Wrappa.h"
 
 #endif /* _WRAPPA_ */
