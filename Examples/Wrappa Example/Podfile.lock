@@ -55,23 +55,30 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
-  - Mantle (2.0.2):
-    - Mantle/extobjc (= 2.0.2)
-  - Mantle/extobjc (2.0.2)
+  - Mantle (2.0.6):
+    - Mantle/extobjc (= 2.0.6)
+  - Mantle/extobjc (2.0.6)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - Wrappa (0.1.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
   - libextobjc (~> 0.4.1)
-  - Mantle (~> 2.0.2)
+  - Mantle (~> 2.0.3)
   - SDWebImage (~> 3.7.2)
+  - Wrappa (from `../../`)
+
+EXTERNAL SOURCES:
+  Wrappa:
+    :path: "../../"
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
-  Mantle: 967fd31ea0220890b2e76589198996b534bb3fb1
+  Mantle: 299966b00759634931699f69cb6a30b9239b944d
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  Wrappa: b5401b57955f21e34ca4e7cd8085b3c345da3444
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

@@ -11,17 +11,12 @@
 		2EAF7BF2232056B8C82CEA79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6356392ECEB9D5944A0E1B4C /* main.m */; };
 		78228CB95BFADF8F2B7C32A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A05E3B52B838D8047DDD5115 /* libPods.a */; };
 		846DCAB447EDDFB02E10948C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6336057FAD9878956473F /* AppDelegate.m */; };
-		E048290C1B6E978200E3A679 /* WRTableSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E048290B1B6E978200E3A679 /* WRTableSource.m */; };
-		E04829101B6E986A00E3A679 /* UITableView+Wrappa.m in Sources */ = {isa = PBXBuildFile; fileRef = E048290F1B6E986A00E3A679 /* UITableView+Wrappa.m */; };
 		E04829181B6EB26600E3A679 /* WRWrappaView.m in Sources */ = {isa = PBXBuildFile; fileRef = E04829171B6EB26600E3A679 /* WRWrappaView.m */; };
 		E048291E1B6EB3CE00E3A679 /* WRTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E048291A1B6EB3CE00E3A679 /* WRTextCell.m */; };
 		E048291F1B6EB3CE00E3A679 /* WRTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E048291B1B6EB3CE00E3A679 /* WRTextCell.xib */; };
 		E04829201B6EB3CE00E3A679 /* WRTextCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E048291D1B6EB3CE00E3A679 /* WRTextCellSource.m */; };
 		E04829251B6F9BF700E3A679 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04829241B6F9BF700E3A679 /* Storyboard.storyboard */; };
 		E0E9CE401B6E579600934684 /* WRWrappaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CE3F1B6E579600934684 /* WRWrappaViewController.m */; };
-		E0E9CE551B6E584600934684 /* WRTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CE471B6E584600934684 /* WRTableCell.m */; };
-		E0E9CE571B6E584600934684 /* WRTableCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CE4B1B6E584600934684 /* WRTableCellSource.m */; };
-		E0E9CE581B6E584600934684 /* WRTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CE4E1B6E584600934684 /* WRTableSection.m */; };
 		E1D5406B933B7233E615C689 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA447B849250EF9AB8C1D5B /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,10 +29,6 @@
 		9C244E63A025AC8EB4D53CCB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A05E3B52B838D8047DDD5115 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D6336057FAD9878956473F /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E048290A1B6E978200E3A679 /* WRTableSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableSource.h; sourceTree = "<group>"; };
-		E048290B1B6E978200E3A679 /* WRTableSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTableSource.m; sourceTree = "<group>"; };
-		E048290E1B6E986A00E3A679 /* UITableView+Wrappa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Wrappa.h"; sourceTree = "<group>"; };
-		E048290F1B6E986A00E3A679 /* UITableView+Wrappa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Wrappa.m"; sourceTree = "<group>"; };
 		E04829161B6EB26600E3A679 /* WRWrappaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRWrappaView.h; sourceTree = "<group>"; };
 		E04829171B6EB26600E3A679 /* WRWrappaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRWrappaView.m; sourceTree = "<group>"; };
 		E04829191B6EB3CE00E3A679 /* WRTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTextCell.h; sourceTree = "<group>"; };
@@ -48,15 +39,6 @@
 		E04829241B6F9BF700E3A679 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		E0E9CE3E1B6E579600934684 /* WRWrappaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRWrappaViewController.h; sourceTree = "<group>"; };
 		E0E9CE3F1B6E579600934684 /* WRWrappaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRWrappaViewController.m; sourceTree = "<group>"; };
-		E0E9CE421B6E584600934684 /* Wrappa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wrappa.h; sourceTree = "<group>"; };
-		E0E9CE461B6E584600934684 /* WRTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableCell.h; sourceTree = "<group>"; };
-		E0E9CE471B6E584600934684 /* WRTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTableCell.m; sourceTree = "<group>"; };
-		E0E9CE491B6E584600934684 /* WRTableCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableCellProtocol.h; sourceTree = "<group>"; };
-		E0E9CE4A1B6E584600934684 /* WRTableCellSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableCellSource.h; sourceTree = "<group>"; };
-		E0E9CE4B1B6E584600934684 /* WRTableCellSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTableCellSource.m; sourceTree = "<group>"; };
-		E0E9CE4C1B6E584600934684 /* WRTableCellSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableCellSourceProtocol.h; sourceTree = "<group>"; };
-		E0E9CE4D1B6E584600934684 /* WRTableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRTableSection.h; sourceTree = "<group>"; };
-		E0E9CE4E1B6E584600934684 /* WRTableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRTableSection.m; sourceTree = "<group>"; };
 		E7F2ADA9BAF9C9CBCF8D8740 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F9072A87822CE26BAB00EC63 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF07559CC397BACF8EABC706 /* Wrappa Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Wrappa Example-Info.plist"; sourceTree = "<group>"; };
@@ -108,7 +90,6 @@
 		21C5949DDFE91FE1C8ECDA5F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				E0E9CE411B6E584600934684 /* Wrappa */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -209,59 +190,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E048290D1B6E985400E3A679 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				E048290E1B6E986A00E3A679 /* UITableView+Wrappa.h */,
-				E048290F1B6E986A00E3A679 /* UITableView+Wrappa.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		E0E9CE411B6E584600934684 /* Wrappa */ = {
-			isa = PBXGroup;
-			children = (
-				E0E9CE421B6E584600934684 /* Wrappa.h */,
-				E0E9CE431B6E584600934684 /* Wrappers */,
-			);
-			name = Wrappa;
-			path = ../../../../../Wrappa;
-			sourceTree = "<group>";
-		};
-		E0E9CE431B6E584600934684 /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				E0E9CE441B6E584600934684 /* UITableView */,
-			);
-			path = Wrappers;
-			sourceTree = "<group>";
-		};
-		E0E9CE441B6E584600934684 /* UITableView */ = {
-			isa = PBXGroup;
-			children = (
-				E048290D1B6E985400E3A679 /* Categories */,
-				E0E9CE451B6E584600934684 /* Cells */,
-				E048290A1B6E978200E3A679 /* WRTableSource.h */,
-				E048290B1B6E978200E3A679 /* WRTableSource.m */,
-				E0E9CE4D1B6E584600934684 /* WRTableSection.h */,
-				E0E9CE4E1B6E584600934684 /* WRTableSection.m */,
-			);
-			path = UITableView;
-			sourceTree = "<group>";
-		};
-		E0E9CE451B6E584600934684 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				E0E9CE461B6E584600934684 /* WRTableCell.h */,
-				E0E9CE471B6E584600934684 /* WRTableCell.m */,
-				E0E9CE4A1B6E584600934684 /* WRTableCellSource.h */,
-				E0E9CE4B1B6E584600934684 /* WRTableCellSource.m */,
-				E0E9CE491B6E584600934684 /* WRTableCellProtocol.h */,
-				E0E9CE4C1B6E584600934684 /* WRTableCellSourceProtocol.h */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		EFD64E2F44AB9E0E530AB2B9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +220,7 @@
 				A4A3DC7B1353EAFBFFD28F82 /* Resources */,
 				D46535582A62B5251EAC5B90 /* Copy Pods Resources */,
 				D0986AD8DC31B88D61508B72 /* Warn for TODO and FIXME comments */,
+				B369EAD389272BD9B86DCADC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +238,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zakhej.com;
 			};
 			buildConfigurationList = 423A4EBE41578256CDE9AF23 /* Build configuration list for PBXProject "Wrappa Example" */;
@@ -358,6 +287,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		B369EAD389272BD9B86DCADC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D0986AD8DC31B88D61508B72 /* Warn for TODO and FIXME comments */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,14 +341,9 @@
 				E04829201B6EB3CE00E3A679 /* WRTextCellSource.m in Sources */,
 				846DCAB447EDDFB02E10948C /* AppDelegate.m in Sources */,
 				E048291E1B6EB3CE00E3A679 /* WRTextCell.m in Sources */,
-				E0E9CE581B6E584600934684 /* WRTableSection.m in Sources */,
-				E0E9CE551B6E584600934684 /* WRTableCell.m in Sources */,
 				E04829181B6EB26600E3A679 /* WRWrappaView.m in Sources */,
 				2EAF7BF2232056B8C82CEA79 /* main.m in Sources */,
-				E04829101B6E986A00E3A679 /* UITableView+Wrappa.m in Sources */,
-				E048290C1B6E978200E3A679 /* WRTableSource.m in Sources */,
 				E0E9CE401B6E579600934684 /* WRWrappaViewController.m in Sources */,
-				E0E9CE571B6E584600934684 /* WRTableCellSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +372,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zakhejcom.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -462,6 +402,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -514,6 +455,7 @@
 				INFOPLIST_FILE = "Wrappa Example/Supporting Files/Wrappa Example-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zakhejcom.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

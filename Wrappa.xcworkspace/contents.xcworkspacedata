@@ -33,9 +33,6 @@
                   location = "group:WRTableCell.m">
                </FileRef>
                <FileRef
-                  location = "group:WRTableCell.xib">
-               </FileRef>
-               <FileRef
                   location = "group:WRTableCellProtocol.h">
                </FileRef>
                <FileRef
@@ -46,6 +43,9 @@
                </FileRef>
                <FileRef
                   location = "group:WRTableCellSourceProtocol.h">
+               </FileRef>
+               <FileRef
+                  location = "group:WRTableCell.xib">
                </FileRef>
             </Group>
             <FileRef

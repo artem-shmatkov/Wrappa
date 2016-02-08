@@ -22,6 +22,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Availability.h>
+#import <UIKit/UIKit.h>
 
 #ifndef _WRAPPA_
 #define _WRAPPA_

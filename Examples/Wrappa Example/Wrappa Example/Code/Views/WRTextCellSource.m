@@ -26,11 +26,11 @@
 @implementation WRTextCellSource
 
 - (id)init {
-    self = [super init];
-    if (self) {
-        self.cellClass = WRTextCell.class.description;
-    }
-    return self;
+  self = [super init];
+  if (self) {
+    self.cellClass = WRTextCell.class.description;
+  }
+  return self;
 }
 
 @end
