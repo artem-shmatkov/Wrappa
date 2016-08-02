@@ -26,6 +26,6 @@
 
 - (void)addSection:(WRTableSection *)section;
 - (void)clear;
-- (void)recalculateIndexPath;
+- (void)recalculateIndexPaths;
 
 @end

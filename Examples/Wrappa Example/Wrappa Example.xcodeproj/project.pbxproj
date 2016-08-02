@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		1475A23092E706510ADFD3A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F2ADA9BAF9C9CBCF8D8740 /* Images.xcassets */; };
 		2EAF7BF2232056B8C82CEA79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6356392ECEB9D5944A0E1B4C /* main.m */; };
-		78228CB95BFADF8F2B7C32A6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A05E3B52B838D8047DDD5115 /* libPods.a */; };
 		846DCAB447EDDFB02E10948C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6336057FAD9878956473F /* AppDelegate.m */; };
+		96E965CE08B21B4B257CD9C5 /* libPods-Wrappa Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3CD8642E418A770E872333 /* libPods-Wrappa Example.a */; };
 		E04829181B6EB26600E3A679 /* WRWrappaView.m in Sources */ = {isa = PBXBuildFile; fileRef = E04829171B6EB26600E3A679 /* WRWrappaView.m */; };
 		E048291E1B6EB3CE00E3A679 /* WRTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E048291A1B6EB3CE00E3A679 /* WRTextCell.m */; };
 		E048291F1B6EB3CE00E3A679 /* WRTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E048291B1B6EB3CE00E3A679 /* WRTextCell.xib */; };
@@ -26,8 +26,7 @@
 		6356392ECEB9D5944A0E1B4C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E55923598C88AD7DCAAD4C4 /* Wrappa Example-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Wrappa Example-Prefix.pch"; sourceTree = "<group>"; };
 		783AADB44FC9A44FC32838D2 /* Wrappa Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wrappa Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C244E63A025AC8EB4D53CCB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		A05E3B52B838D8047DDD5115 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A0E751BC6AF44DC09C52D44 /* Pods-Wrappa Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wrappa Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wrappa Example/Pods-Wrappa Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C8D6336057FAD9878956473F /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E04829161B6EB26600E3A679 /* WRWrappaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRWrappaView.h; sourceTree = "<group>"; };
 		E04829171B6EB26600E3A679 /* WRWrappaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRWrappaView.m; sourceTree = "<group>"; };
@@ -39,9 +38,10 @@
 		E04829241B6F9BF700E3A679 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		E0E9CE3E1B6E579600934684 /* WRWrappaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRWrappaViewController.h; sourceTree = "<group>"; };
 		E0E9CE3F1B6E579600934684 /* WRWrappaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRWrappaViewController.m; sourceTree = "<group>"; };
+		E63C94B4ED92D29213B22BA0 /* Pods-Wrappa Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wrappa Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wrappa Example/Pods-Wrappa Example.release.xcconfig"; sourceTree = "<group>"; };
 		E7F2ADA9BAF9C9CBCF8D8740 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F9072A87822CE26BAB00EC63 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF07559CC397BACF8EABC706 /* Wrappa Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Wrappa Example-Info.plist"; sourceTree = "<group>"; };
+		FF3CD8642E418A770E872333 /* libPods-Wrappa Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wrappa Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D5406B933B7233E615C689 /* Foundation.framework in Frameworks */,
-				78228CB95BFADF8F2B7C32A6 /* libPods.a in Frameworks */,
+				96E965CE08B21B4B257CD9C5 /* libPods-Wrappa Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +71,7 @@
 				473C83743C9A186C886B6E95 /* Wrappa Example */,
 				A930A685A52ED2C69418F596 /* Frameworks */,
 				D0C8C873D82185BDB6AA240C /* Products */,
-				3D297BE159ADEE8E2714D7CB /* Pods */,
+				BEA10865E7741573B2B27692 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -108,15 +108,6 @@
 				0AA447B849250EF9AB8C1D5B /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		3D297BE159ADEE8E2714D7CB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F9072A87822CE26BAB00EC63 /* Pods.release.xcconfig */,
-				9C244E63A025AC8EB4D53CCB /* Pods.debug.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		473C83743C9A186C886B6E95 /* Wrappa Example */ = {
@@ -156,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				24B3C83308CF2A6B05099983 /* iOS */,
-				A05E3B52B838D8047DDD5115 /* libPods.a */,
+				FF3CD8642E418A770E872333 /* libPods-Wrappa Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,6 +160,15 @@
 				F7D31E8BE18A9DA97316BA49 /* Other */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BEA10865E7741573B2B27692 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E63C94B4ED92D29213B22BA0 /* Pods-Wrappa Example.release.xcconfig */,
+				7A0E751BC6AF44DC09C52D44 /* Pods-Wrappa Example.debug.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BF19C8B5C96D0BDBB5BFC922 /* Code */ = {
@@ -214,13 +214,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0F173103AEBFAE1BFDB13AA /* Build configuration list for PBXNativeTarget "Wrappa Example" */;
 			buildPhases = (
-				AD23E5F8FE7A38AA343AACBE /* Check Pods Manifest.lock */,
+				E4150CAC13A2C4DA553AFEE3 /* [CP] Check Pods Manifest.lock */,
 				5CA211FAC4A3C259C2D38D2E /* Sources */,
 				E93B62A4A67269D49E67A204 /* Frameworks */,
 				A4A3DC7B1353EAFBFFD28F82 /* Resources */,
-				D46535582A62B5251EAC5B90 /* Copy Pods Resources */,
 				D0986AD8DC31B88D61508B72 /* Warn for TODO and FIXME comments */,
-				B369EAD389272BD9B86DCADC /* Embed Pods Frameworks */,
+				3D5F5DDC2B4C4628E823C025 /* [CP] Embed Pods Frameworks */,
+				0A5B7563D248B5028C6369BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,34 +272,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AD23E5F8FE7A38AA343AACBE /* Check Pods Manifest.lock */ = {
+		0A5B7563D248B5028C6369BA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wrappa Example/Pods-Wrappa Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B369EAD389272BD9B86DCADC /* Embed Pods Frameworks */ = {
+		3D5F5DDC2B4C4628E823C025 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wrappa Example/Pods-Wrappa Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D0986AD8DC31B88D61508B72 /* Warn for TODO and FIXME comments */ = {
@@ -316,19 +316,19 @@
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"swift|h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/Carthage\" -o -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
-		D46535582A62B5251EAC5B90 /* Copy Pods Resources */ = {
+		E4150CAC13A2C4DA553AFEE3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -352,7 +352,7 @@
 /* Begin XCBuildConfiguration section */
 		00B74B4F8C362EDC2ACB34FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9072A87822CE26BAB00EC63 /* Pods.release.xcconfig */;
+			baseConfigurationReference = E63C94B4ED92D29213B22BA0 /* Pods-Wrappa Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -437,7 +437,7 @@
 		};
 		B96ECA938AC8709376E1F4C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C244E63A025AC8EB4D53CCB /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7A0E751BC6AF44DC09C52D44 /* Pods-Wrappa Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

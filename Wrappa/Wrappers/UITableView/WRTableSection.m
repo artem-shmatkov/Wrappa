@@ -31,76 +31,76 @@
 @implementation WRTableSection
 
 - (instancetype)init {
-  self = [super init];
-  if (self) {
-    self.rows = [NSMutableArray new];
-  }
-  return self;
+    self = [super init];
+    if (self) {
+        self.rows = [NSMutableArray new];
+    }
+    return self;
 }
 
 - (NSUInteger)numberOfRows {
-  return _rows.count;
+    return _rows.count;
 }
 
 - (WRTableCellSource *)sourceForRow:(NSUInteger)row {
-  return _rows[row];
+    return _rows[row];
 }
 
 - (WRTableCellSource *)sourceForTag:(NSInteger)tag {
-  for (WRTableCellSource *source in _rows) {
-    if (source.tag == tag) {
-      return source;
+    for (WRTableCellSource *source in _rows) {
+        if (source.tag == tag) {
+            return source;
+        }
     }
-  }
-  
-  return nil;
+    
+    return nil;
 }
 
 #pragma mark - Data Source Methods
 
 - (void)addSpaceHeight:(CGFloat)height {
-  WRTableCellSource *source = [WRTableCellSource new];
-  source.height = height;
-  [self addSource:source];
+    WRTableCellSource *source = [WRTableCellSource new];
+    source.height = height;
+    [self addSource:source];
 }
 
 - (void)addSource:(WRTableCellSource *)source {
-  [_rows addObject:source];
+    [_rows addObject:source];
 }
 
 - (void)addSources:(NSArray *)sourcesArray {
-  [_rows addObjectsFromArray:sourcesArray];
+    [_rows addObjectsFromArray:sourcesArray];
 }
 
 - (void)replaceSources:(NSArray *)sourcesArray {
-  [_rows removeAllObjects];
-  _rows = [NSMutableArray arrayWithArray:sourcesArray];
+    [_rows removeAllObjects];
+    _rows = [NSMutableArray arrayWithArray:sourcesArray];
 }
 
 - (void)insertSource:(WRTableCellSource *)source atIndex:(NSUInteger)index {
-  if (index < _rows.count) {
-    [_rows insertObject:source atIndex:index];
-  }
+    if (index < _rows.count) {
+        [_rows insertObject:source atIndex:index];
+    }
 }
 
 - (void)insertSources:(NSArray *)sourcesArray atIndex:(NSUInteger)index {
-  if (index < _rows.count) {
-    NSRange range = NSMakeRange(index, sourcesArray.count);
-    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
-    [_rows insertObjects:sourcesArray atIndexes:indexSet];
-  }
+    if (index < _rows.count) {
+        NSRange range = NSMakeRange(index, sourcesArray.count);
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
+        [_rows insertObjects:sourcesArray atIndexes:indexSet];
+    }
 }
 
 - (void)removeSource:(WRTableCellSource *)source {
-  [_rows removeObject:source];
+    [_rows removeObject:source];
 }
 
 - (void)removeSourceAtIndex:(NSUInteger)index {
-  [_rows removeObjectAtIndex:index];
+    [_rows removeObjectAtIndex:index];
 }
 
 - (void)removeSourcesAtIndexes:(NSIndexSet *)indexSet {
-  [_rows removeObjectsAtIndexes:indexSet];
+    [_rows removeObjectsAtIndexes:indexSet];
 }
 
 @end

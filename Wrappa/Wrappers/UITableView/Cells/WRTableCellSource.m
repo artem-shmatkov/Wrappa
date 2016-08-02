@@ -26,17 +26,17 @@
 @implementation WRTableCellSource
 
 - (id)init {
-  self = [super init];
-  if (self) {
-    self.cellClass = WRTableCell.class.description;
-    self.height = 50;
-    self.canDelete = NO;
-    self.canEdit = NO;
-    self.selected = NO;
-    self.buttonTarget = nil;
-    self.buttonSelector = NULL;
-  }
-  return self;
+    self = [super init];
+    if (self) {
+        self.cellClass = WRTableCell.class.description;
+        self.height = 50;
+        self.canDelete = NO;
+        self.canEdit = NO;
+        self.selected = NO;
+        self.buttonTarget = nil;
+        self.buttonSelector = NULL;
+    }
+    return self;
 }
 
 @end

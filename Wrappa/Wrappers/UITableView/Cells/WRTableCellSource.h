@@ -25,18 +25,19 @@
 #import "WRTableCell.h"
 
 /**
- Base cell source class. Contains most used cell properties.
+ Base cell source class. Contains most used cells properties.
  */
 @interface WRTableCellSource : NSObject
 
 @property (nonatomic, weak) id <WRTableCellSourceProtocol> delegate;
 @property (nonatomic, weak) id <WRTableCellProtocol> cell;
 
-@property (nonatomic, strong) NSString *cellClass;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *footerTitle;
-@property (nonatomic, strong) NSString *headerTitle;
-@property (nonatomic, strong) NSString *deleteConfirmationTitle;
+@property (nonatomic, copy) NSString *cellClass;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *footerTitle;
+@property (nonatomic, copy) NSString *headerTitle;
+@property (nonatomic, copy) NSString *deleteConfirmationTitle;
+@property (nonatomic, copy) NSIndexPath *indexPath;
 
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) UIView *footerView;
@@ -46,7 +47,6 @@
 @property (nonatomic, assign) CGFloat headerViewHeight;
 @property (nonatomic, assign) CGFloat footerViewHeight;
 
-@property (nonatomic, strong) NSIndexPath *indexPath;
 @property (nonatomic, assign) NSInteger tag;
 
 @property (nonatomic, strong) id buttonTarget;

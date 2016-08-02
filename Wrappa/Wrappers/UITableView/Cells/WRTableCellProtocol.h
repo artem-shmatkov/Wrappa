@@ -28,7 +28,7 @@
 @protocol WRTableCellProtocol <NSObject>
 
 @required
-- (void)setUpWithSource:(WRTableCellSource *)source;
+- (void)setSource:(WRTableCellSource *)source;
 
 @optional
 - (void)setActive;
