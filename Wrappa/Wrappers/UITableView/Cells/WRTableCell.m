@@ -24,6 +24,6 @@
 
 @implementation WRTableCell
 
-- (void)setUpWithSource:(WRTableCellSource *)source {}
+- (void)setSource:(WRTableCellSource *)source {}
 
 @end
