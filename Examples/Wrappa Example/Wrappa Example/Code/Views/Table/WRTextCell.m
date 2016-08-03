@@ -1,6 +1,6 @@
-// WRTableCellSourceProtocol.h
+// WRTextCell.m
 //
-// Copyright (c) 2015 Art Shmatkov
+// Copyright (c) 2015 zakhej.com
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,13 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@class WRTableCellSource;
+#import "WRTextCell.h"
 
-@protocol WRTableCellSourceProtocol <NSObject>
+@interface WRTextCell () 
 
-@optional
-- (void)cellWithSource:(WRTableCellSource *)source didUpdateValue:(id)updatedValue;
-- (void)deleteCellWithSource:(WRTableCellSource *)source;
-- (void)moveCellWithSource:(WRTableCellSource *)source fromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)fromIndexPath;
+@end
+
+@implementation WRTextCell
+
+- (void)setSource:(WRTextCellSource *)source {
+    self.textLabel.text = source.title;
+}
 
 @end

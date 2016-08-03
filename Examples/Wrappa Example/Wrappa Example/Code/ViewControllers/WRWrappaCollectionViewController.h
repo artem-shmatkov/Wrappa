@@ -1,6 +1,6 @@
-// UITableView+Wrappa.h
+// WRWrappaTableViewController.h
 //
-// Copyright (c) 2015 Art Shmatkov
+// Copyright (c) 2016 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,17 +22,6 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- This category adds methods to the UIKit framework's `UITableView` class.
- */
-@interface UITableView (Wrappa)
-
-/**
- Convenience method to register nib for cell reuse.
- Notice that the method uses `bundle:nil` parameter.
- 
- @param class `class.description` will be used as a nib file name and reuse identifier.
- */
-- (void)registerClass:(Class)class;
+@interface WRWrappaCollectionViewController : UIViewController
 
 @end

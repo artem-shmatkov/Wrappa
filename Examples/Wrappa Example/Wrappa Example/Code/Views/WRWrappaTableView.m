@@ -1,6 +1,6 @@
-// WRTextCell.m
+// WRWrappaTableView.m
 //
-// Copyright (c) 2015 zakhej.com
+// Copyright (c) 2015 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,16 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRTextCell.h"
+#import "WRWrappaTableView.h"
 
-@interface WRTextCell () 
+@implementation WRWrappaTableView
 
-@end
-
-@implementation WRTextCell
-
-- (void)setUpWithSource:(WRTextCellSource *)source {
-  self.textLabel.text = source.title;
+- (void)awakeFromNib {
+  [super awakeFromNib];
+  self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+  self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(20, 0, 0, 0);
 }
 
 @end

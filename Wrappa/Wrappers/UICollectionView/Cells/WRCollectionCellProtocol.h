@@ -1,6 +1,6 @@
-// WRTextCellSource.m
+// WRCollectionCellProtocol.h
 //
-// Copyright (c) 2015 zakhej.com
+// Copyright (c) 2016 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,17 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRTextCellSource.h"
-#import "WRTextCell.h"
+@class WRCollectionCellSource;
 
-@implementation WRTextCellSource
+/**
+ Cell protocol.
+ */
+@protocol WRCollectionCellProtocol <NSObject>
 
-- (id)init {
-  self = [super init];
-  if (self) {
-    self.cellClass = WRTextCell.class.description;
-  }
-  return self;
-}
+@required
+- (void)setSource:(WRCollectionCellSource *)source;
+
+@optional
+- (void)setActive;
 
 @end

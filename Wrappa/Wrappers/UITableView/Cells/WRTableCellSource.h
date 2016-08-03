@@ -22,22 +22,17 @@
 
 #import "WRTableCellSourceProtocol.h"
 #import "WRTableCellProtocol.h"
+#import "WRBaseCellSource.h"
 #import "WRTableCell.h"
 
-/**
- Base cell source class. Contains most used cells properties.
- */
-@interface WRTableCellSource : NSObject
+@interface WRTableCellSource : WRBaseCellSource
 
 @property (nonatomic, weak) id <WRTableCellSourceProtocol> delegate;
 @property (nonatomic, weak) id <WRTableCellProtocol> cell;
 
-@property (nonatomic, copy) NSString *cellClass;
-@property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *footerTitle;
 @property (nonatomic, copy) NSString *headerTitle;
 @property (nonatomic, copy) NSString *deleteConfirmationTitle;
-@property (nonatomic, copy) NSIndexPath *indexPath;
 
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) UIView *footerView;
@@ -47,15 +42,10 @@
 @property (nonatomic, assign) CGFloat headerViewHeight;
 @property (nonatomic, assign) CGFloat footerViewHeight;
 
-@property (nonatomic, assign) NSInteger tag;
-
 @property (nonatomic, strong) id buttonTarget;
 @property (nonatomic, assign) SEL buttonSelector;
 
 @property (nonatomic, assign) BOOL showSeparator;
-@property (nonatomic, assign) BOOL canEdit;
-@property (nonatomic, assign) BOOL canDelete;
-@property (nonatomic, assign) BOOL canRearrange;
 @property (nonatomic, assign) BOOL selected;
 @property (nonatomic, assign) BOOL shouldHighlight;
 

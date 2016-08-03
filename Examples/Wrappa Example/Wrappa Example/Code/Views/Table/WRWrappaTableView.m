@@ -1,4 +1,4 @@
-// WRTableCellSourceProtocol.h
+// WRWrappaTableView.m
 //
 // Copyright (c) 2015 Art Shmatkov
 //
@@ -20,13 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@class WRTableCellSource;
+#import "WRWrappaTableView.h"
+#import "UITableView+Wrappa.h"
 
-@protocol WRTableCellSourceProtocol <NSObject>
+@implementation WRWrappaTableView
 
-@optional
-- (void)cellWithSource:(WRTableCellSource *)source didUpdateValue:(id)updatedValue;
-- (void)deleteCellWithSource:(WRTableCellSource *)source;
-- (void)moveCellWithSource:(WRTableCellSource *)source fromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)fromIndexPath;
+- (void)registerClass:(Class)class {
+    [self.tableView registerClass:class];
+}
 
 @end

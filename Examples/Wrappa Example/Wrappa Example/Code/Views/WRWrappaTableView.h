@@ -1,4 +1,4 @@
-// WRTableSectionModel.h
+// WRWrappaTableView.h
 //
 // Copyright (c) 2015 Art Shmatkov
 //
@@ -20,48 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRWrappaViewController.h"
-#import "WRWrappaView.h"
-#import "Wrappa.h"
-#import "WRTextCell.h"
-#import "WRTextCellSource.h"
+#import <UIKit/UIKit.h>
 
-@interface WRWrappaViewController ()
+@interface WRWrappaTableView : UIView
 
-@property (strong, nonatomic) IBOutlet WRWrappaView *myView;
-@property (strong, nonatomic) IBOutlet WRTableSource *dataSource;
-
-@end
-
-@implementation WRWrappaViewController
-
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  [self setup];
-}
-
-- (void)setup {
-  [self.myView.tableView registerClass:WRTextCell.class];
-  
-  WRTableSource *tableSource = [WRTableSource new];
-  self.myView.tableView.delegate = tableSource;
-  self.myView.tableView.dataSource = tableSource;
-  
-  WRTableSection *sectionModel = [WRTableSection new];
-  WRTextCellSource *source;
-  
-  source = [WRTextCellSource new];
-  source.title = @"First cell";
-  [sectionModel addSource:source];
-  
-  source = [WRTextCellSource new];
-  source.title = @"Second cell";
-  [sectionModel addSource:source];
-  
-  [tableSource addSection:sectionModel];
-  
-  self.dataSource = tableSource;
-  [self.myView.tableView reloadData];
-}
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

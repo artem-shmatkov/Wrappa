@@ -1,6 +1,6 @@
-// WRTableCellSourceProtocol.h
+// WRBaseCellSource.h
 //
-// Copyright (c) 2015 Art Shmatkov
+// Copyright (c) 2016 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,13 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@class WRTableCellSource;
+@interface WRBaseCellSource : NSObject
 
-@protocol WRTableCellSourceProtocol <NSObject>
+@property (nonatomic, assign) NSInteger tag;
 
-@optional
-- (void)cellWithSource:(WRTableCellSource *)source didUpdateValue:(id)updatedValue;
-- (void)deleteCellWithSource:(WRTableCellSource *)source;
-- (void)moveCellWithSource:(WRTableCellSource *)source fromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)fromIndexPath;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSIndexPath *indexPath;
+@property (nonatomic, copy) NSString *cellClass;
+
+@property (nonatomic, assign) BOOL canEdit;
+@property (nonatomic, assign) BOOL canDelete;
+@property (nonatomic, assign) BOOL canMove;
 
 @end

@@ -25,7 +25,8 @@
 @implementation UITableView (Wrappa)
 
 - (void)registerClass:(Class)class {
-    [self registerNib:[UINib nibWithNibName:class.description bundle:nil] forCellReuseIdentifier:class.description];
+    NSString *description = class.description;
+    [self registerNib:[UINib nibWithNibName:description bundle:nil] forCellReuseIdentifier:description];
 }
 
 @end

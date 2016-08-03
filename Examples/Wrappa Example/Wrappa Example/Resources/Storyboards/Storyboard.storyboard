@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yuy-2t-BHc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yuy-2t-BHc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Wrappa View Controller-->
+        <!--Wrappa Table View Controller-->
         <scene sceneID="dZu-bR-NMn">
             <objects>
-                <viewController id="yuy-2t-BHc" customClass="WRWrappaViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WRWrappaViewController" id="yuy-2t-BHc" customClass="WRWrappaTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="82j-S2-3PG"/>
                         <viewControllerLayoutGuide type="bottom" id="qja-av-8nr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ndn-aB-Bod" customClass="WRWrappaView">
+                    <view key="view" contentMode="scaleToFill" id="ndn-aB-Bod" customClass="WRWrappaTableView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s05-0d-82X">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qja-av-8nr" firstAttribute="top" secondItem="s05-0d-82X" secondAttribute="bottom" id="6i2-Nk-ILA"/>
-                            <constraint firstItem="s05-0d-82X" firstAttribute="top" secondItem="ndn-aB-Bod" secondAttribute="top" id="XDN-mP-SC6"/>
+                            <constraint firstItem="s05-0d-82X" firstAttribute="top" secondItem="ndn-aB-Bod" secondAttribute="top" constant="20" id="XDN-mP-SC6"/>
                             <constraint firstAttribute="trailing" secondItem="s05-0d-82X" secondAttribute="trailing" id="aHy-GJ-Vlf"/>
                             <constraint firstItem="s05-0d-82X" firstAttribute="leading" secondItem="ndn-aB-Bod" secondAttribute="leading" id="jqm-Zo-XT6"/>
                         </constraints>
@@ -42,6 +43,55 @@
                 <customObject id="buX-4k-uR6" customClass="WRTableSource"/>
             </objects>
             <point key="canvasLocation" x="470" y="375"/>
+        </scene>
+        <!--Wrappa Collection View Controller-->
+        <scene sceneID="Z39-O0-uNk">
+            <objects>
+                <viewController storyboardIdentifier="WRWrappaCollectionViewController" id="aNh-UP-ryI" customClass="WRWrappaCollectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vH4-Zd-HXN"/>
+                        <viewControllerLayoutGuide type="bottom" id="gHY-yI-48K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5QI-Bk-NEU" customClass="WRWrappaCollectionView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P1q-7Z-IG6">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hvy-Xq-P9F">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WRRectangleCell" id="e2h-id-mc6">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P1q-7Z-IG6" secondAttribute="trailing" id="4E6-PN-dcw"/>
+                            <constraint firstItem="P1q-7Z-IG6" firstAttribute="leading" secondItem="5QI-Bk-NEU" secondAttribute="leading" id="dFv-P6-ZeF"/>
+                            <constraint firstItem="gHY-yI-48K" firstAttribute="top" secondItem="P1q-7Z-IG6" secondAttribute="bottom" id="fyW-Tp-Ke3"/>
+                            <constraint firstItem="P1q-7Z-IG6" firstAttribute="top" secondItem="5QI-Bk-NEU" secondAttribute="top" constant="20" id="pfe-8S-GgD"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="collectionView" destination="P1q-7Z-IG6" id="80W-kq-cQ8"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohY-gJ-ccG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130" y="375"/>
         </scene>
     </scenes>
 </document>

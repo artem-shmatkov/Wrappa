@@ -1,6 +1,6 @@
-// WRTextCell.h
+// WRBaseSource.h
 //
-// Copyright (c) 2015 zakhej.com
+// Copyright (c) 2016 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,11 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRTextCellSource.h"
-#import "WRTableCell.h"
+#import "WRBaseSection.h"
 
-@interface WRTextCell : WRTableCell <WRTableCellProtocol>
+@interface WRBaseSource : NSObject
 
-- (void)setUpWithSource:(WRTextCellSource *)source;
+@property (nonatomic, strong) NSMutableArray *sections;
+
+- (void)addSection:(WRBaseSection *)section;
+- (void)clear;
+- (void)recalculateIndexPaths;
+
+- (WRBaseCellSource *)sourceForIndexPath:(NSIndexPath *)indexPath;
+- (WRBaseCellSource *)headerSourceForSection:(NSInteger)section;
+- (WRBaseCellSource *)footerSourceForSection:(NSInteger)section;
+- (WRBaseCellSource *)headerViewSourceForSection:(NSInteger)section;
+- (WRBaseCellSource *)footerViewSourceForSection:(NSInteger)section;
+- (NSUInteger)numberOfSections;
+- (NSUInteger)sectionRowsCount:(NSInteger)section;
 
 @end
