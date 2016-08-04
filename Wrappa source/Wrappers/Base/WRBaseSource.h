@@ -31,11 +31,11 @@
 - (void)recalculateIndexPaths;
 
 - (WRBaseCellSource *)sourceForIndexPath:(NSIndexPath *)indexPath;
-- (WRBaseCellSource *)headerSourceForSection:(NSInteger)section;
-- (WRBaseCellSource *)footerSourceForSection:(NSInteger)section;
-- (WRBaseCellSource *)headerViewSourceForSection:(NSInteger)section;
-- (WRBaseCellSource *)footerViewSourceForSection:(NSInteger)section;
-- (NSUInteger)numberOfSections;
-- (NSUInteger)sectionRowsCount:(NSInteger)section;
+- (WRBaseCellSource *)headerSourceForSection:(NSUInteger)section;
+- (WRBaseCellSource *)footerSourceForSection:(NSUInteger)section;
+- (WRBaseCellSource *)headerViewSourceForSection:(NSUInteger)section;
+- (WRBaseCellSource *)footerViewSourceForSection:(NSUInteger)section;
+- (NSInteger)numberOfSections;
+- (NSInteger)sectionRowsCount:(NSInteger)section;
 
 @end

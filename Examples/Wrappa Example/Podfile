@@ -9,5 +9,5 @@ target 'Wrappa Example' do
     pod 'SDWebImage',           '~> 3.7.2'
     
     # development pod
-    pod 'Wrappa',               :path => '../../'
+    #    pod 'Wrappa',               :path => '../../'
 end

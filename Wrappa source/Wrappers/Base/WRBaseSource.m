@@ -64,25 +64,25 @@
     return cellSource;
 }
 
-- (WRBaseCellSource *)headerSourceForSection:(NSInteger)section {
+- (WRBaseCellSource *)headerSourceForSection:(NSUInteger)section {
     WRBaseSection *sectionModel = _sections[section];
     WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
-- (WRBaseCellSource *)footerSourceForSection:(NSInteger)section {
+- (WRBaseCellSource *)footerSourceForSection:(NSUInteger)section {
     WRBaseSection *sectionModel = _sections[section];
     WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
-- (WRBaseCellSource *)headerViewSourceForSection:(NSInteger)section {
+- (WRBaseCellSource *)headerViewSourceForSection:(NSUInteger)section {
     WRBaseSection *sectionModel = _sections[section];
     WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
-- (WRBaseCellSource *)footerViewSourceForSection:(NSInteger)section {
+- (WRBaseCellSource *)footerViewSourceForSection:(NSUInteger)section {
     WRBaseSection *sectionModel = _sections[section];
     WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
     return cellSource;
