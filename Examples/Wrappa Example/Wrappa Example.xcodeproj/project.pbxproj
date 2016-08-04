@@ -12,6 +12,8 @@
 		846DCAB447EDDFB02E10948C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6336057FAD9878956473F /* AppDelegate.m */; };
 		96E965CE08B21B4B257CD9C5 /* libPods-Wrappa Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3CD8642E418A770E872333 /* libPods-Wrappa Example.a */; };
 		E007EC3B1D528FD4005AB7D7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E007EC3A1D528FD4005AB7D7 /* Launch Screen.storyboard */; };
+		E007EC421D5348CB005AB7D7 /* WRCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E007EC411D5348CB005AB7D7 /* WRCollectionHeaderView.xib */; };
+		E007EC451D534902005AB7D7 /* WRCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E007EC441D534902005AB7D7 /* WRCollectionHeaderView.m */; };
 		E00AC7551D5254C100AB72CC /* UITableView+Wrappa.m in Sources */ = {isa = PBXBuildFile; fileRef = E00AC7541D5254C100AB72CC /* UITableView+Wrappa.m */; };
 		E00AC7701D5262BF00AB72CC /* WRWrappaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00AC76F1D5262BF00AB72CC /* WRWrappaCollectionViewController.m */; };
 		E00AC7851D526BAC00AB72CC /* WRTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E00AC77F1D526BAC00AB72CC /* WRTextCell.m */; };
@@ -37,6 +39,9 @@
 		7A0E751BC6AF44DC09C52D44 /* Pods-Wrappa Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wrappa Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wrappa Example/Pods-Wrappa Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C8D6336057FAD9878956473F /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E007EC3A1D528FD4005AB7D7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E007EC411D5348CB005AB7D7 /* WRCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WRCollectionHeaderView.xib; sourceTree = "<group>"; };
+		E007EC431D534902005AB7D7 /* WRCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCollectionHeaderView.h; sourceTree = "<group>"; };
+		E007EC441D534902005AB7D7 /* WRCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCollectionHeaderView.m; sourceTree = "<group>"; };
 		E00AC7531D5254C100AB72CC /* UITableView+Wrappa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Wrappa.h"; sourceTree = "<group>"; };
 		E00AC7541D5254C100AB72CC /* UITableView+Wrappa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Wrappa.m"; sourceTree = "<group>"; };
 		E00AC76E1D5262BF00AB72CC /* WRWrappaCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRWrappaCollectionViewController.h; sourceTree = "<group>"; };
@@ -224,6 +229,9 @@
 				E00AC7951D527A8F00AB72CC /* WRRectangleCellSource.m */,
 				E00AC7891D526C7000AB72CC /* WRWrappaCollectionView.h */,
 				E00AC78A1D526C7000AB72CC /* WRWrappaCollectionView.m */,
+				E007EC431D534902005AB7D7 /* WRCollectionHeaderView.h */,
+				E007EC441D534902005AB7D7 /* WRCollectionHeaderView.m */,
+				E007EC411D5348CB005AB7D7 /* WRCollectionHeaderView.xib */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -292,6 +300,11 @@
 				CLASSPREFIX = "";
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zakhej.com;
+				TargetAttributes = {
+					A41929C7B4A3B343F1CAAF4F = {
+						DevelopmentTeam = 5XKPBQ9WWB;
+					};
+				};
 			};
 			buildConfigurationList = 423A4EBE41578256CDE9AF23 /* Build configuration list for PBXProject "Wrappa Example" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -315,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E007EC421D5348CB005AB7D7 /* WRCollectionHeaderView.xib in Resources */,
 				E00AC7861D526BAC00AB72CC /* WRTextCell.xib in Resources */,
 				1475A23092E706510ADFD3A1 /* Images.xcassets in Resources */,
 				E00AC7931D5279BD00AB72CC /* WRRectangleCell.xib in Resources */,
@@ -395,6 +409,7 @@
 				E00AC7871D526BAC00AB72CC /* WRTextCellSource.m in Sources */,
 				E00AC7961D527A8F00AB72CC /* WRRectangleCellSource.m in Sources */,
 				846DCAB447EDDFB02E10948C /* AppDelegate.m in Sources */,
+				E007EC451D534902005AB7D7 /* WRCollectionHeaderView.m in Sources */,
 				E00AC7701D5262BF00AB72CC /* WRWrappaCollectionViewController.m in Sources */,
 				E00AC78E1D526D4000AB72CC /* UICollectionView+Wrappa.m in Sources */,
 				2EAF7BF2232056B8C82CEA79 /* main.m in Sources */,
@@ -416,7 +431,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -435,6 +451,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zakhejcom.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -502,7 +519,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -519,6 +537,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zakhejcom.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};

@@ -25,11 +25,12 @@
 #import "Wrappa.h"
 #import "WRRectangleCell.h"
 #import "WRRectangleCellSource.h"
+#import "WRCollectionHeaderView.h"
 
 @interface WRWrappaCollectionViewController ()
 
 @property (strong, nonatomic) IBOutlet WRWrappaCollectionView *myView;
-@property (strong, nonatomic) IBOutlet WRCollectionSource *dataSource;
+@property (strong, nonatomic) WRCollectionSource *dataSource;
 
 @end
 
@@ -41,27 +42,89 @@
 }
 
 - (void)setup {
-    [self.myView registerClass:WRRectangleCell.class];
+    [self.myView registerCellClass:WRRectangleCell.class];
+    [self.myView registerHeaderClass:WRCollectionHeaderView.class];
+    [self.myView registerFooterClass:WRCollectionHeaderView.class];
     
     WRCollectionSource *collectionSource = [WRCollectionSource new];
-    self.myView.collectionView.delegate = collectionSource;
-    self.myView.collectionView.dataSource = collectionSource;
+    self.myView.source = collectionSource;
+    WRRectangleCellSource *source = nil;
+    WRCollectionSection *sectionModel = nil;
     
-    WRTableSection *sectionModel = [WRTableSection new];
-    WRRectangleCellSource *source;
+    // first section
+    
+    sectionModel = [WRCollectionSection new];
     
     source = [WRRectangleCellSource new];
-    source.title = @"First cell";
+    source.rectColor = [self randomColor];
+    source.headerColor = [UIColor greenColor];
+    source.referenceSizeForHeader = CGSizeMake(10, 30);
+    source.headerTitle = @"Header 1";
     [sectionModel addSource:source];
     
     source = [WRRectangleCellSource new];
-    source.title = @"Second cell";
+    source.rectColor = [self randomColor];
+    [sectionModel addSource:source];
+    
+    source = [WRRectangleCellSource new];
+    source.rectColor = [self randomColor];
     [sectionModel addSource:source];
     
     [collectionSource addSection:sectionModel];
     
+    // second section
+    
+    sectionModel = [WRCollectionSection new];
+    
+    source = [WRRectangleCellSource new];
+    source.rectColor = [self randomColor];
+    source.headerColor = [UIColor yellowColor];
+    source.referenceSizeForHeader = CGSizeMake(10, 30);
+    source.headerTitle = @"Header 2";
+    [sectionModel addSource:source];
+    
+    source = [WRRectangleCellSource new];
+    source.rectColor = [self randomColor];
+    [sectionModel addSource:source];
+    
+    source = [WRRectangleCellSource new];
+    source.rectColor = [self randomColor];
+    [sectionModel addSource:source];
+    
+    [collectionSource addSection:sectionModel];
+    
+    // third section
+    
+    sectionModel = [WRCollectionSection new];
+    
+    for (int i = 7; i < 100; i++) {
+        source = [WRRectangleCellSource new];
+        source.rectColor = [self randomColor];
+        [sectionModel addSource:source];
+    }
+    
+    source = (WRRectangleCellSource *)[sectionModel sourceForRow:0];
+    source.headerColor = [UIColor grayColor];
+    source.footerColor = [UIColor redColor];
+    source.referenceSizeForHeader = CGSizeMake(10, 30);
+    source.headerTitle = @"Header 3";
+    source.referenceSizeForFooter = CGSizeMake(10, 30);
+    source.footerTitle = @"Footer";
+    
+    [collectionSource addSection:sectionModel];
+    
+    // reload
+    
     self.dataSource = collectionSource;
-    [self.myView.collectionView reloadData];
+    [self.myView reloadData];
+}
+
+- (UIColor *)randomColor {
+    u_int32_t red = arc4random_uniform(256);
+    u_int32_t green = arc4random_uniform(256);
+    u_int32_t blue = arc4random_uniform(256);
+    u_int32_t multiplier = arc4random_uniform(3);
+    return [UIColor colorWithRed:(red / multiplier) / 255.0  green:(green / multiplier) / 255.0 blue:(blue / multiplier) / 255.0 alpha:1.0];
 }
 
 @end

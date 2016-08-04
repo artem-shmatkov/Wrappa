@@ -25,8 +25,9 @@
 @property (nonatomic, assign) NSInteger tag;
 
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSIndexPath *indexPath;
 @property (nonatomic, copy) NSString *cellClass;
+@property (nonatomic, copy) NSIndexPath *indexPath;
+@property (nonatomic, copy) UIColor *backgroundColor;
 
 @property (nonatomic, assign) BOOL canEdit;
 @property (nonatomic, assign) BOOL canDelete;

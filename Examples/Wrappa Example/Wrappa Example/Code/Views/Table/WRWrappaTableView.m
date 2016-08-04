@@ -23,10 +23,25 @@
 #import "WRWrappaTableView.h"
 #import "UITableView+Wrappa.h"
 
+@interface WRWrappaTableView ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@end
+
 @implementation WRWrappaTableView
 
 - (void)registerClass:(Class)class {
     [self.tableView registerClass:class];
+}
+
+- (void)setSource:(id <UITableViewDelegate, UITableViewDataSource>)source {
+    self.tableView.delegate = source;
+    self.tableView.dataSource = source;
+}
+
+- (void)reloadData {
+    [self.tableView reloadData];
 }
 
 @end

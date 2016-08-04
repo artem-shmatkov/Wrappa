@@ -8,8 +8,10 @@
 
 #import <Wrappa/Wrappa.h>
 
-@interface WRRectangleCellSource : WRBaseCellSource
+@interface WRRectangleCellSource : WRCollectionCellSource
 
 @property (nonatomic, copy) UIColor *rectColor;
+@property (nonatomic, copy) UIColor *headerColor;
+@property (nonatomic, copy) UIColor *footerColor;
 
 @end

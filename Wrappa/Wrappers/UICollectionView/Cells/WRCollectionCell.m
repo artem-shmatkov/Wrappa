@@ -24,4 +24,6 @@
 
 @implementation WRCollectionCell
 
+- (void)setSource:(WRCollectionCellSource *)source {}
+
 @end

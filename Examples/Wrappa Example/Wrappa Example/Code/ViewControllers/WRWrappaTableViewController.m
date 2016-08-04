@@ -29,7 +29,7 @@
 @interface WRWrappaTableViewController ()
 
 @property (strong, nonatomic) IBOutlet WRWrappaTableView *myView;
-@property (strong, nonatomic) IBOutlet WRTableSource *dataSource;
+@property (strong, nonatomic) WRTableSource *dataSource;
 
 @end
 
@@ -44,13 +44,13 @@
     [self.myView registerClass:WRTextCell.class];
     
     WRTableSource *tableSource = [WRTableSource new];
-    self.myView.tableView.delegate = tableSource;
-    self.myView.tableView.dataSource = tableSource;
+    self.myView.source = tableSource;
+    WRTextCellSource *source = nil;
+    WRTableSection *sectionModel = nil;
     
     // first section
     
-    WRTableSection *sectionModel = [WRTableSection new];
-    WRTextCellSource *source = nil;
+    sectionModel = [WRTableSection new];
     
     source = [WRTextCellSource new];
     source.title = @"First cell";
@@ -98,8 +98,10 @@
     
     [tableSource addSection:sectionModel];
     
+    // reload
+    
     self.dataSource = tableSource;
-    [self.myView.tableView reloadData];
+    [self.myView reloadData];
 }
 
 @end

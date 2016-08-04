@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yuy-2t-BHc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gr5-QU-yxO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Wrappa Table View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ebi-Ix-ZeL">
+            <objects>
+                <tabBarController id="Gr5-QU-yxO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="7sY-tG-GLS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yuy-2t-BHc" kind="relationship" relationship="viewControllers" id="Vgr-Pb-QJK"/>
+                        <segue destination="aNh-UP-ryI" kind="relationship" relationship="viewControllers" id="0XN-7u-SqY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9F9-TF-TA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="375"/>
+        </scene>
+        <!--TableView-->
         <scene sceneID="dZu-bR-NMn">
             <objects>
                 <viewController storyboardIdentifier="WRWrappaViewController" id="yuy-2t-BHc" customClass="WRWrappaTableViewController" sceneMemberID="viewController">
@@ -18,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s05-0d-82X">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -30,21 +48,20 @@
                             <constraint firstItem="s05-0d-82X" firstAttribute="leading" secondItem="ndn-aB-Bod" secondAttribute="leading" id="jqm-Zo-XT6"/>
                         </constraints>
                         <connections>
-                            <outlet property="tableView" destination="s05-0d-82X" id="3Yg-Nn-f6y"/>
+                            <outlet property="tableView" destination="s05-0d-82X" id="wrM-6y-eBm"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="TableView" id="psG-sC-qU3"/>
                     <connections>
-                        <outlet property="dataSource" destination="buX-4k-uR6" id="95b-jy-FHT"/>
                         <outlet property="myView" destination="ndn-aB-Bod" id="rAg-95-2SV"/>
                         <outlet property="view" destination="ndn-aB-Bod" id="XBC-l6-XgG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBI-mR-zhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="buX-4k-uR6" customClass="WRTableSource"/>
             </objects>
             <point key="canvasLocation" x="470" y="375"/>
         </scene>
-        <!--Wrappa Collection View Controller-->
+        <!--CollectionView-->
         <scene sceneID="Z39-O0-uNk">
             <objects>
                 <viewController storyboardIdentifier="WRWrappaCollectionViewController" id="aNh-UP-ryI" customClass="WRWrappaCollectionViewController" sceneMemberID="viewController">
@@ -57,24 +74,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P1q-7Z-IG6">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hvy-Xq-P9F">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WRRectangleCell" id="e2h-id-mc6">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,9 +93,13 @@
                             <constraint firstItem="P1q-7Z-IG6" firstAttribute="top" secondItem="5QI-Bk-NEU" secondAttribute="top" constant="20" id="pfe-8S-GgD"/>
                         </constraints>
                         <connections>
-                            <outlet property="collectionView" destination="P1q-7Z-IG6" id="80W-kq-cQ8"/>
+                            <outlet property="collectionView" destination="P1q-7Z-IG6" id="B8u-Zr-EuP"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="CollectionView" id="3kL-04-Go0"/>
+                    <connections>
+                        <outlet property="myView" destination="5QI-Bk-NEU" id="Z6p-K0-8YD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohY-gJ-ccG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

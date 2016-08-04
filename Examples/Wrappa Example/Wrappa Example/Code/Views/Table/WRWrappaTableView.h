@@ -24,8 +24,10 @@
 
 @interface WRWrappaTableView : UIView
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
-
 - (void)registerClass:(Class)class;
+
+- (void)setSource:(id <UITableViewDelegate, UITableViewDataSource>)source;
+
+- (void)reloadData;
 
 @end

@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface WRWrappaCollectionView : UIView
 
-@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+- (void)registerCellClass:(Class)class;
+- (void)registerHeaderClass:(Class)class;
+- (void)registerFooterClass:(Class)class;
 
-- (void)registerClass:(Class)class;
+- (void)setSource:(id <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource>)source;
+
+- (void)reloadData;
 
 @end

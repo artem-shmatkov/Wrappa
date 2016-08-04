@@ -27,4 +27,23 @@
 
 @interface WRCollectionCellSource : WRBaseCellSource
 
+@property (nonatomic, assign) CGSize itemSize;
+@property (nonatomic, assign) CGSize referenceSizeForHeader;
+@property (nonatomic, assign) CGSize referenceSizeForFooter;
+@property (nonatomic, assign) UIEdgeInsets sectionInsets;
+@property (nonatomic, assign) CGFloat minimumLineSpacing;
+@property (nonatomic, assign) CGFloat minimumInteritemSpacing;
+
+@property (nonatomic, assign) BOOL shouldHighlight;
+@property (nonatomic, assign) BOOL shouldSelect;
+@property (nonatomic, assign) BOOL shouldShowMenu;
+
+@property (nonatomic, copy) NSString *headerClass;
+@property (nonatomic, copy) NSString *footerClass;
+
+@property (nonatomic, copy) NSString *headerTitle;
+@property (nonatomic, copy) NSString *footerTitle;
+
+@property (nonatomic, copy) NSString *supplementaryKind;
+
 @end

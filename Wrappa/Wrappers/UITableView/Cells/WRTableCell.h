@@ -23,9 +23,6 @@
 #import "WRTableCellSource.h"
 #import "WRTableCellProtocol.h"
 
-/**
- Base cell class inherited from `UITableViewCell`. Conforms to `WRTableCellProtocol`.
- */
 @interface WRTableCell : UITableViewCell <WRTableCellProtocol>
 
 @end

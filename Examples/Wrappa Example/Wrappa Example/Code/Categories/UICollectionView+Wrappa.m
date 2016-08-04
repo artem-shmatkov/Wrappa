@@ -24,9 +24,19 @@
 
 @implementation UICollectionView (Wrappa)
 
-- (void)registerClass:(Class)class {
+- (void)registerCellClass:(Class)class {
     NSString *description = class.description;
     [self registerNib:[UINib nibWithNibName:description bundle:nil] forCellWithReuseIdentifier:description];
+}
+
+- (void)registerHeaderClass:(Class)class {
+    NSString *description = class.description;
+    [self registerNib:[UINib nibWithNibName:description bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:description];
+}
+
+- (void)registerFooterClass:(Class)class {
+    NSString *description = class.description;
+    [self registerNib:[UINib nibWithNibName:description bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:description];
 }
 
 @end

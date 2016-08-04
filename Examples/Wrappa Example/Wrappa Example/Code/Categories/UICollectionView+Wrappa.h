@@ -24,6 +24,8 @@
 
 @interface UICollectionView (Wrappa)
 
-- (void)registerClass:(Class)class;
+- (void)registerCellClass:(Class)class;
+- (void)registerHeaderClass:(Class)class;
+- (void)registerFooterClass:(Class)class;
 
 @end

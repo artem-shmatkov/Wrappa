@@ -47,7 +47,7 @@
     for (WRBaseSection *sectionModel in _sections) {
         for (NSUInteger i = 0; i < sectionModel.numberOfRows; i++) {
             WRBaseCellSource *cellSource = [sectionModel sourceForRow:row];
-            cellSource.indexPath = [NSIndexPath indexPathForRow:(NSInteger)row inSection:section];
+            cellSource.indexPath = [NSIndexPath indexPathForRow:row inSection:section];
             row++;
         }
         
@@ -59,41 +59,41 @@
 #pragma mark - Other methods
 
 - (WRBaseCellSource *)sourceForIndexPath:(NSIndexPath *)indexPath {
-    WRBaseSection *sectionModel = self.sections[(NSUInteger)indexPath.section];
-    WRBaseCellSource *cellSource = [sectionModel sourceForRow:(NSUInteger)indexPath.row];
+    WRBaseSection *sectionModel = _sections[indexPath.section];
+    WRBaseCellSource *cellSource = [sectionModel sourceForRow:indexPath.row];
     return cellSource;
 }
 
 - (WRBaseCellSource *)headerSourceForSection:(NSInteger)section {
-    WRBaseSection *sectionModel = self.sections[(NSUInteger)section];
+    WRBaseSection *sectionModel = _sections[section];
     WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
 - (WRBaseCellSource *)footerSourceForSection:(NSInteger)section {
-    WRBaseSection *sectionModel = self.sections[(NSUInteger)section];
+    WRBaseSection *sectionModel = _sections[section];
     WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
 - (WRBaseCellSource *)headerViewSourceForSection:(NSInteger)section {
-    WRBaseSection *sectionModel = self.sections[(NSUInteger)section];
+    WRBaseSection *sectionModel = _sections[section];
     WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
 - (WRBaseCellSource *)footerViewSourceForSection:(NSInteger)section {
-    WRBaseSection *sectionModel = self.sections[(NSUInteger)section];
+    WRBaseSection *sectionModel = _sections[section];
     WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
 - (NSInteger)numberOfSections {
-    return self.sections.count;
+    return _sections.count;
 }
 
 - (NSInteger)sectionRowsCount:(NSInteger)section {
-    WRBaseSection *sectionModel = self.sections[(NSInteger)section];
+    WRBaseSection *sectionModel = _sections[section];
     return sectionModel.numberOfRows;
 }
 
