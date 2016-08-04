@@ -21,11 +21,14 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import <Availability.h>
 #import <UIKit/UIKit.h>
 
 #ifndef _WRAPPA_
 #define _WRAPPA_
+
+#import "WRBaseCellSource.h"
+#import "WRBaseSection.h"
+#import "WRBaseSource.h"
 
 #import "WRTableSource.h"
 #import "WRTableSection.h"
@@ -33,6 +36,12 @@
 #import "WRTableCellSource.h"
 #import "WRTableCellProtocol.h"
 #import "WRTableCellSourceProtocol.h"
-#import "UITableView+Wrappa.h"
+
+#import "WRCollectionSource.h"
+#import "WRCollectionSection.h"
+#import "WRCollectionCell.h"
+#import "WRCollectionCellSource.h"
+#import "WRCollectionCellProtocol.h"
+#import "WRCollectionCellSourceProtocol.h"
 
 #endif /* _WRAPPA_ */

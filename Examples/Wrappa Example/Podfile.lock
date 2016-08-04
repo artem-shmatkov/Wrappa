@@ -61,7 +61,7 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
-  - Wrappa (0.1.2)
+  - Wrappa (0.1.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
@@ -79,7 +79,7 @@ SPEC CHECKSUMS:
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   Mantle: 299966b00759634931699f69cb6a30b9239b944d
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
-  Wrappa: 074411cf6af32e485ffa013470ae39adaeeb7c5c
+  Wrappa: fd90634df02076520660dce8ec84fe6bd4794ebd
 
 PODFILE CHECKSUM: 29ed346fbde31fdcf5c256d690605831de18a1c3
 

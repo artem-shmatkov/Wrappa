@@ -22,30 +22,16 @@
 
 #import "WRTableSource.h"
 
-@interface WRTableSource ()
-
-@property (nonatomic, strong) NSMutableArray *sections;
-
-@end
-
 @implementation WRTableSource
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        self.sections = [NSMutableArray new];
-    }
-    return self;
-}
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return (NSInteger)self.numberOfSections;
+    return self.numberOfSections;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return (NSInteger)[self sectionRowsCount:section];
+    return [self sectionRowsCount:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,6 +63,24 @@
     WRTableCellSource *source = [self sourceForIndexPath:indexPath];
     return source.canEdit;
 }
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    WRTableCellSource *source = [self sourceForIndexPath:indexPath];
+    return source.canMove;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    WRTableCellSource *source = [self sourceForIndexPath:sourceIndexPath];
+    [source.delegate moveCellWithSource:source fromIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
+}
+
+//- (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+//    // TODO: write
+//}
+
+//- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+//    // TODO: write
+//}
 
 #pragma mark - UITableViewDelegate
 
@@ -115,69 +119,58 @@
     return source.deleteConfirmationTitle;
 }
 
-#pragma mark - Other methods
-
-- (WRTableCellSource *)sourceForIndexPath:(NSIndexPath *)indexPath {
-    WRTableSection *sectionModel = _sections[(NSUInteger)indexPath.section];
-    WRTableCellSource *cellSource = [sectionModel sourceForRow:(NSUInteger)indexPath.row];
-    return cellSource;
-}
-
-- (WRTableCellSource *)headerSourceForSection:(NSInteger)section {
-    WRTableSection *sectionModel = _sections[(NSUInteger)section];
-    WRTableCellSource *cellSource = [sectionModel sourceForRow:0];
-    return cellSource;
-}
-
-- (WRTableCellSource *)footerSourceForSection:(NSInteger)section {
-    WRTableSection *sectionModel = _sections[(NSUInteger)section];
-    WRTableCellSource *cellSource = [sectionModel sourceForRow:0];
-    return cellSource;
-}
-
-- (WRTableCellSource *)headerViewSourceForSection:(NSInteger)section {
-    WRTableSection *sectionModel = _sections[(NSUInteger)section];
-    WRTableCellSource *cellSource = [sectionModel sourceForRow:0];
-    return cellSource;
-}
-
-- (WRTableCellSource *)footerViewSourceForSection:(NSInteger)section {
-    WRTableSection *sectionModel = _sections[(NSUInteger)section];
-    WRTableCellSource *cellSource = [sectionModel sourceForRow:0];
-    return cellSource;
-}
-
-- (NSUInteger)numberOfSections {
-    return _sections.count;
-}
-
-- (NSUInteger)sectionRowsCount:(NSInteger)section {
-    WRTableSection *sectionModel = _sections[(NSUInteger)section];
-    return sectionModel.numberOfRows;
-}
-
-- (void)addSection:(WRTableSection *)section {
-    [_sections addObject:section];
-}
-
-- (void)clear {
-    [_sections removeAllObjects];
-}
-
-- (void)recalculateIndexPaths {
-    NSInteger section = 0;
-    NSUInteger row = 0;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    for (WRTableSection *sectionModel in _sections) {
-        for (NSUInteger i = 0; i < sectionModel.numberOfRows; i++) {
-            WRTableCellSource *cellSource = [sectionModel sourceForRow:row];
-            cellSource.indexPath = [NSIndexPath indexPathForRow:(NSInteger)row inSection:section];
-            row++;
-        }
-        
-        row = 0;
-        section++;
-    }
 }
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+//- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section;
+//- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section;
+//- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath;
+//- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section;
+//- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section;
+//
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath;
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section;
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section;
+//
+//- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath;
+//- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath;
+//
+//- (nullable NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+//- (nullable NSIndexPath *)tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath;
+//
+//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath;
+//- (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath;
+//
+//- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath;
+//- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath;
+//- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath;
+//
+//- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath;
+//- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath;
+//- (BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath;
+//- (BOOL)tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(nullable id)sender;
+//- (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(nullable id)sender;
+
+#ifdef __IPHONE_9_0
+// Focus
+//- (BOOL)tableView:(UITableView *)tableView canFocusRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(9_0);
+//- (BOOL)tableView:(UITableView *)tableView shouldUpdateFocusInContext:(UITableViewFocusUpdateContext *)context NS_AVAILABLE_IOS(9_0);
+//- (void)tableView:(UITableView *)tableView didUpdateFocusInContext:(UITableViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator NS_AVAILABLE_IOS(9_0);
+//- (nullable NSIndexPath *)indexPathForPreferredFocusedViewInTableView:(UITableView *)tableView NS_AVAILABLE_IOS(9_0);
+#endif
 
 @end

@@ -20,25 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "WRBaseSection.h"
 #import "WRTableCellSource.h"
 
-@interface WRTableSection : NSObject
+@interface WRTableSection : WRBaseSection
 
-- (NSUInteger)numberOfRows;
-- (WRTableCellSource *)sourceForRow:(NSUInteger)row;
-- (WRTableCellSource *)sourceForTag:(NSInteger)tag;
-
-- (void)addSpaceHeight:(CGFloat)height;
-- (void)addSource:(WRTableCellSource *)source;
-- (void)addSources:(NSArray *)sourcesArray;
-
-- (void)replaceSources:(NSArray *)sourcesArray;
-
-- (void)insertSource:(WRTableCellSource *)source atIndex:(NSUInteger)index;
-- (void)insertSources:(NSArray *)sourcesArray atIndex:(NSUInteger)index;
-
-- (void)removeSource:(WRTableCellSource *)source;
-- (void)removeSourceAtIndex:(NSUInteger)index;
-- (void)removeSourcesAtIndexes:(NSIndexSet *)indexSet;
+- (void)addEmptySpaceWithHeight:(CGFloat)height;
 
 @end

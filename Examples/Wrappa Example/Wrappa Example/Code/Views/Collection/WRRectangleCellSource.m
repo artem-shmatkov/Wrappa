@@ -1,6 +1,6 @@
-// WRTableSectionModel.h
+// WRRectangleCellSource.m
 //
-// Copyright (c) 2015 Art Shmatkov
+// Copyright (c) 2016 zakhej.com
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,8 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "WRRectangleCellSource.h"
+#import "WRRectangleCell.h"
+#import "WRCollectionHeaderView.h"
 
-@interface WRWrappaViewController : UIViewController
+@implementation WRRectangleCellSource
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.cellClass = WRRectangleCell.class.description;
+        self.headerClass = WRCollectionHeaderView.class.description;
+        self.footerClass = WRCollectionHeaderView.class.description;
+        self.itemSize = CGSizeMake(100, 100);
+        self.referenceSizeForHeader = CGSizeZero;
+        self.referenceSizeForFooter = CGSizeZero;
+        self.sectionInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+        self.minimumLineSpacing = 5;
+        self.minimumInteritemSpacing = 5;
+    }
+    return self;
+}
 
 @end

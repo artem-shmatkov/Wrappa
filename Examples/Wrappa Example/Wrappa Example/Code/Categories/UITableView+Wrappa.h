@@ -1,4 +1,4 @@
-// WRWrappaView.h
+// UITableView+Wrappa.h
 //
 // Copyright (c) 2015 Art Shmatkov
 //
@@ -22,8 +22,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WRWrappaView : UIView
+@interface UITableView (Wrappa)
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+- (void)registerClass:(Class)class;
 
 @end

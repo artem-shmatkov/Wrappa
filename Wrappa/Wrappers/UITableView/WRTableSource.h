@@ -20,12 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "WRBaseSource.h"
 #import "WRTableSection.h"
 
-@interface WRTableSource : NSObject <UITableViewDataSource, UITableViewDelegate>
-
-- (void)addSection:(WRTableSection *)section;
-- (void)clear;
-- (void)recalculateIndexPaths;
+@interface WRTableSource : WRBaseSource <UITableViewDataSource, UITableViewDelegate>
 
 @end

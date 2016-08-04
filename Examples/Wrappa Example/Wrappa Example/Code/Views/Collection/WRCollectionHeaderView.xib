@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WRCollectionHeaderView" id="l0c-jH-LY9" customClass="WRCollectionHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kZ-FP-yxs">
+                    <rect key="frame" x="8" y="2" width="304" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5kZ-FP-yxs" secondAttribute="bottom" constant="2" id="TfR-RF-Ria"/>
+                <constraint firstItem="5kZ-FP-yxs" firstAttribute="leading" secondItem="l0c-jH-LY9" secondAttribute="leading" constant="8" id="bAV-pm-RRW"/>
+                <constraint firstAttribute="trailing" secondItem="5kZ-FP-yxs" secondAttribute="trailing" constant="8" id="g77-Ws-ebn"/>
+                <constraint firstItem="5kZ-FP-yxs" firstAttribute="top" secondItem="l0c-jH-LY9" secondAttribute="top" constant="2" id="zZr-Do-Mjp"/>
+            </constraints>
+            <connections>
+                <outlet property="label" destination="5kZ-FP-yxs" id="9ng-eQ-ogo"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

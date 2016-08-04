@@ -1,6 +1,6 @@
-// WRTextCell.h
+// WRWrappaTableView.h
 //
-// Copyright (c) 2015 zakhej.com
+// Copyright (c) 2015 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,11 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRTextCellSource.h"
-#import "WRTableCell.h"
+#import <UIKit/UIKit.h>
 
-@interface WRTextCell : WRTableCell <WRTableCellProtocol>
+@interface WRWrappaTableView : UIView
 
-- (void)setUpWithSource:(WRTextCellSource *)source;
+- (void)registerClass:(Class)class;
+
+- (void)setSource:(id <UITableViewDelegate, UITableViewDataSource>)source;
+
+- (void)reloadData;
 
 @end

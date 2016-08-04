@@ -1,6 +1,6 @@
-// WRTableCellSourceProtocol.h
+// WRCollectionCellSource.h
 //
-// Copyright (c) 2015 Art Shmatkov
+// Copyright (c) 2016 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,13 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@class WRTableCellSource;
+#import "WRBaseCellSource.h"
+#import "WRCollectionCellProtocol.h"
+#import "WRBaseCellSource.h"
+#import "WRCollectionCell.h"
 
-@protocol WRTableCellSourceProtocol <NSObject>
+@interface WRCollectionCellSource : WRBaseCellSource
 
-@optional
-- (void)cellWithSource:(WRTableCellSource *)source didUpdateValue:(id)updatedValue;
-- (void)deleteCellWithSource:(WRTableCellSource *)source;
-- (void)moveCellWithSource:(WRTableCellSource *)source fromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)fromIndexPath;
+@property (nonatomic, assign) CGSize itemSize;
+@property (nonatomic, assign) CGSize referenceSizeForHeader;
+@property (nonatomic, assign) CGSize referenceSizeForFooter;
+@property (nonatomic, assign) UIEdgeInsets sectionInsets;
+@property (nonatomic, assign) CGFloat minimumLineSpacing;
+@property (nonatomic, assign) CGFloat minimumInteritemSpacing;
+
+@property (nonatomic, assign) BOOL shouldHighlight;
+@property (nonatomic, assign) BOOL shouldSelect;
+@property (nonatomic, assign) BOOL shouldShowMenu;
+
+@property (nonatomic, copy) NSString *headerClass;
+@property (nonatomic, copy) NSString *footerClass;
+
+@property (nonatomic, copy) NSString *headerTitle;
+@property (nonatomic, copy) NSString *footerTitle;
+
+@property (nonatomic, copy) NSString *supplementaryKind;
 
 @end

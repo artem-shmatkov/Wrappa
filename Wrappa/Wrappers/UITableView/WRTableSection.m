@@ -22,85 +22,14 @@
 
 #import "WRTableSection.h"
 
-@interface WRTableSection ()
-
-@property (nonatomic, strong) NSMutableArray *rows;
-
-@end
-
 @implementation WRTableSection
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        self.rows = [NSMutableArray new];
-    }
-    return self;
-}
-
-- (NSUInteger)numberOfRows {
-    return _rows.count;
-}
-
-- (WRTableCellSource *)sourceForRow:(NSUInteger)row {
-    return _rows[row];
-}
-
-- (WRTableCellSource *)sourceForTag:(NSInteger)tag {
-    for (WRTableCellSource *source in _rows) {
-        if (source.tag == tag) {
-            return source;
-        }
-    }
-    
-    return nil;
-}
 
 #pragma mark - Data Source Methods
 
-- (void)addSpaceHeight:(CGFloat)height {
+- (void)addEmptySpaceWithHeight:(CGFloat)height {
     WRTableCellSource *source = [WRTableCellSource new];
     source.height = height;
     [self addSource:source];
-}
-
-- (void)addSource:(WRTableCellSource *)source {
-    [_rows addObject:source];
-}
-
-- (void)addSources:(NSArray *)sourcesArray {
-    [_rows addObjectsFromArray:sourcesArray];
-}
-
-- (void)replaceSources:(NSArray *)sourcesArray {
-    [_rows removeAllObjects];
-    _rows = [NSMutableArray arrayWithArray:sourcesArray];
-}
-
-- (void)insertSource:(WRTableCellSource *)source atIndex:(NSUInteger)index {
-    if (index < _rows.count) {
-        [_rows insertObject:source atIndex:index];
-    }
-}
-
-- (void)insertSources:(NSArray *)sourcesArray atIndex:(NSUInteger)index {
-    if (index < _rows.count) {
-        NSRange range = NSMakeRange(index, sourcesArray.count);
-        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
-        [_rows insertObjects:sourcesArray atIndexes:indexSet];
-    }
-}
-
-- (void)removeSource:(WRTableCellSource *)source {
-    [_rows removeObject:source];
-}
-
-- (void)removeSourceAtIndex:(NSUInteger)index {
-    [_rows removeObjectAtIndex:index];
-}
-
-- (void)removeSourcesAtIndexes:(NSIndexSet *)indexSet {
-    [_rows removeObjectsAtIndexes:indexSet];
 }
 
 @end
