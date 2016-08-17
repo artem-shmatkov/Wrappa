@@ -41,6 +41,7 @@
 #import "WRCollectionSection.h"
 #import "WRCollectionCell.h"
 #import "WRCollectionCellSource.h"
+#import "WRCollectionReusableView.h"
 #import "WRCollectionCellProtocol.h"
 #import "WRCollectionCellSourceProtocol.h"
 

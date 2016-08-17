@@ -22,9 +22,10 @@
 
 #import "WRBaseSection.h"
 
-@interface WRBaseSource : NSObject
+@interface WRBaseSource : NSObject <UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *sections;
+@property (nonatomic, weak) id <UIScrollViewDelegate> scrollViewDelegate;
 
 - (void)addSection:(WRBaseSection *)section;
 - (void)clear;

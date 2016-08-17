@@ -97,4 +97,88 @@
     return sectionModel.numberOfRows;
 }
 
+#pragma mark - Scroll View Delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewDidScroll:)]) {
+        [_scrollViewDelegate scrollViewDidScroll:scrollView];
+    }
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewDidZoom:)]) {
+        [_scrollViewDelegate scrollViewDidZoom:scrollView];
+    }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
+        [_scrollViewDelegate scrollViewWillBeginDragging:scrollView];
+    }
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewWillEndDragging:withVelocity:targetContentOffset:)]) {
+        [_scrollViewDelegate scrollViewWillEndDragging:scrollView withVelocity:velocity targetContentOffset:targetContentOffset];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewDidEndDragging:willDecelerate:)]) {
+        [_scrollViewDelegate scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+    }
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewWillBeginDecelerating:)]) {
+        [_scrollViewDelegate scrollViewWillBeginDecelerating:scrollView];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
+        [_scrollViewDelegate scrollViewDidEndDecelerating:scrollView];
+    }
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewDidEndScrollingAnimation:)]) {
+        [_scrollViewDelegate scrollViewDidEndScrollingAnimation:scrollView];
+    }
+}
+
+- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(viewForZoomingInScrollView:)]) {
+        return [_scrollViewDelegate viewForZoomingInScrollView:scrollView];
+    }
+    
+    return nil;
+}
+
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewWillBeginZooming:withView:)]) {
+        [_scrollViewDelegate scrollViewWillBeginZooming:scrollView withView:view];
+    }
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view atScale:(CGFloat)scale {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewDidEndZooming:withView:atScale:)]) {
+        [_scrollViewDelegate scrollViewDidEndZooming:scrollView withView:view atScale:scale];
+    }
+}
+
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewShouldScrollToTop:)]) {
+        return [_scrollViewDelegate scrollViewShouldScrollToTop:scrollView];
+    }
+    
+    return YES;
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    if (_scrollViewDelegate && [_scrollViewDelegate respondsToSelector:@selector(scrollViewDidScrollToTop:)]) {
+        [_scrollViewDelegate scrollViewDidScrollToTop:scrollView];
+    }
+}
+
 @end

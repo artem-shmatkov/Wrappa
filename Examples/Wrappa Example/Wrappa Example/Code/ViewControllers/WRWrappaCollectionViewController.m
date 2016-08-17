@@ -27,7 +27,7 @@
 #import "WRRectangleCellSource.h"
 #import "WRCollectionHeaderView.h"
 
-@interface WRWrappaCollectionViewController ()
+@interface WRWrappaCollectionViewController () <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet WRWrappaCollectionView *myView;
 @property (strong, nonatomic) WRCollectionSource *dataSource;
@@ -112,6 +112,7 @@
     source.footerTitle = @"Footer";
     
     [collectionSource addSection:sectionModel];
+    collectionSource.scrollViewDelegate = self;
     
     // reload
     
@@ -125,6 +126,62 @@
     u_int32_t blue = arc4random_uniform(256);
     u_int32_t multiplier = arc4random_uniform(3);
     return [UIColor colorWithRed:(red / multiplier) / 255.0  green:(green / multiplier) / 255.0 blue:(blue / multiplier) / 255.0 alpha:1.0];
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidScroll");
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidEndScrollingAnimation");
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewWillBeginDragging");
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    NSLog(@"scrollViewWillEndDragging");
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    NSLog(@"scrollViewDidEndDragging");
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewWillBeginDecelerating");
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidEndDecelerating");
+}
+
+- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    NSLog(@"viewForZoomingInScrollView");
+    return nil;
+}
+
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
+    NSLog(@"scrollViewWillBeginZooming");
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidZoom");
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
+    NSLog(@"scrollViewDidEndZooming");
+}
+
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewShouldScrollToTop");
+    return YES;
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidScrollToTop");
 }
 
 @end

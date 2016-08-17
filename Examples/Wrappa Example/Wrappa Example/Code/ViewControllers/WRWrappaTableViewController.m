@@ -26,7 +26,7 @@
 #import "WRTextCell.h"
 #import "WRTextCellSource.h"
 
-@interface WRWrappaTableViewController ()
+@interface WRWrappaTableViewController () <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet WRWrappaTableView *myView;
 @property (strong, nonatomic) WRTableSource *dataSource;
@@ -97,11 +97,68 @@
     }
     
     [tableSource addSection:sectionModel];
+    tableSource.scrollViewDelegate = self;
     
     // reload
     
     self.dataSource = tableSource;
     [self.myView reloadData];
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidScroll");
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidEndScrollingAnimation");
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewWillBeginDragging");
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    NSLog(@"scrollViewWillEndDragging");
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    NSLog(@"scrollViewDidEndDragging");
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewWillBeginDecelerating");
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidEndDecelerating");
+}
+
+- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    NSLog(@"viewForZoomingInScrollView");
+    return nil;
+}
+
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
+    NSLog(@"scrollViewWillBeginZooming");
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidZoom");
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
+    NSLog(@"scrollViewDidEndZooming");
+}
+
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewShouldScrollToTop");
+    return YES;
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidScrollToTop");
 }
 
 @end
