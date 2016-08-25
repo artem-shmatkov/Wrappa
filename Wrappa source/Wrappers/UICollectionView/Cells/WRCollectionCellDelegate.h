@@ -20,13 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@class WRCollectionCellSource;
+@class WRCollectionCell, WRCollectionCellSource;
 
-@protocol WRCollectionCellSourceProtocol <NSObject>
+@protocol WRCollectionCellDelegate <NSObject>
 
 @optional
-- (void)cellWithSource:(WRCollectionCellSource *)source didUpdateValue:(id)updatedValue;
-- (void)deleteCellWithSource:(WRCollectionCellSource *)source;
-- (void)moveCellWithSource:(WRCollectionCellSource *)source fromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)fromIndexPath;
+- (void)cell:(WRCollectionCell *)cell withSource:(WRCollectionCellSource *)source didUpdateValue:(id)updatedValue;
+- (void)touchedCell:(WRCollectionCell *)cell withSource:(WRCollectionCellSource *)source;
+- (void)deletedCell:(WRCollectionCell *)cell withSource:(WRCollectionCellSource *)source;
+- (void)movedCell:(WRCollectionCell *)cell withSource:(WRCollectionCellSource *)source fromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)fromIndexPath;
 
 @end

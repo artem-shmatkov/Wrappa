@@ -1,25 +1,4 @@
 PODS:
-  - AFNetworking (2.5.4):
-    - AFNetworking/NSURLConnection (= 2.5.4)
-    - AFNetworking/NSURLSession (= 2.5.4)
-    - AFNetworking/Reachability (= 2.5.4)
-    - AFNetworking/Security (= 2.5.4)
-    - AFNetworking/Serialization (= 2.5.4)
-    - AFNetworking/UIKit (= 2.5.4)
-  - AFNetworking/NSURLConnection (2.5.4):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.5.4):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.5.4)
-  - AFNetworking/Security (2.5.4)
-  - AFNetworking/Serialization (2.5.4)
-  - AFNetworking/UIKit (2.5.4):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
     - libextobjc/EXTConcreteProtocol (= 0.4.1)
@@ -55,32 +34,25 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
-  - Mantle (2.0.6):
-    - Mantle/extobjc (= 2.0.6)
-  - Mantle/extobjc (2.0.6)
-  - SDWebImage (3.7.3):
-    - SDWebImage/Core (= 3.7.3)
-  - SDWebImage/Core (3.7.3)
-  - Wrappa (0.2.2)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - Wrappa (0.2.3)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.5.4)
   - libextobjc (~> 0.4.1)
-  - Mantle (~> 2.0.3)
   - SDWebImage (~> 3.7.2)
-  - Wrappa (from `../../`)
+  - Wrappa (from `.`)
 
 EXTERNAL SOURCES:
   Wrappa:
-    :path: ../../
+    :path: .
 
 SPEC CHECKSUMS:
-  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
-  Mantle: 299966b00759634931699f69cb6a30b9239b944d
-  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
-  Wrappa: d1d378ba7cead4740279cd0646a4985335e1a743
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  Wrappa: 438163ecdf08c4fc4348e055a196509eeb301388
 
-PODFILE CHECKSUM: 3636226d331abd4b8d1e3f35f5d9766d4404b894
+PODFILE CHECKSUM: c46c7b7ae95f787637ff4510875cb4424e262030
 
 COCOAPODS: 1.0.1

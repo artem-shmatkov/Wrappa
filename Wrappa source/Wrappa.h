@@ -35,7 +35,7 @@
 #import "WRTableCell.h"
 #import "WRTableCellSource.h"
 #import "WRTableCellProtocol.h"
-#import "WRTableCellSourceProtocol.h"
+#import "WRTableCellDelegate.h"
 
 #import "WRCollectionSource.h"
 #import "WRCollectionSection.h"
@@ -43,6 +43,6 @@
 #import "WRCollectionCellSource.h"
 #import "WRCollectionReusableView.h"
 #import "WRCollectionCellProtocol.h"
-#import "WRCollectionCellSourceProtocol.h"
+#import "WRCollectionCellDelegate.h"
 
 #endif /* _WRAPPA_ */

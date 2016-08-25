@@ -30,7 +30,4 @@
 @required
 - (void)setSource:(WRTableCellSource *)source;
 
-@optional
-- (void)setActive;
-
 @end

@@ -22,9 +22,19 @@
 
 #import "WRTableSection.h"
 
+@interface WRTableSection ()
+
+@property (nonatomic, copy) NSArray<NSString *> *indexTitles;
+
+@end
+
 @implementation WRTableSection
 
 #pragma mark - Data Source Methods
+
+- (void)setIndexTitles:(nullable NSArray<NSString *> *)indexTitles {
+    self.indexTitles = indexTitles;
+}
 
 - (void)addEmptySpaceWithHeight:(CGFloat)height {
     WRTableCellSource *source = [WRTableCellSource new];

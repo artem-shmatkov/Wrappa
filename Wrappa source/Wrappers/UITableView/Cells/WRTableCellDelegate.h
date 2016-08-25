@@ -20,13 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@class WRTableCellSource;
+@class WRTableCell, WRTableCellSource;
 
-@protocol WRTableCellSourceProtocol <NSObject>
+@protocol WRTableCellDelegate <NSObject>
 
 @optional
-- (void)cellWithSource:(WRTableCellSource *)source didUpdateValue:(id)updatedValue;
-- (void)deleteCellWithSource:(WRTableCellSource *)source;
-- (void)moveCellWithSource:(WRTableCellSource *)source fromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)fromIndexPath;
+- (void)cell:(WRTableCell *)cell withSource:(WRTableCellSource *)source didUpdateValue:(id)updatedValue;
+- (void)touchedCell:(WRTableCell *)cell withSource:(WRTableCellSource *)source;
+- (void)deletedCell:(WRTableCell *)cell withSource:(WRTableCellSource *)source;
+- (void)movedCell:(WRTableCell *)cell withSource:(WRTableCellSource *)source fromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)fromIndexPath;
 
 @end

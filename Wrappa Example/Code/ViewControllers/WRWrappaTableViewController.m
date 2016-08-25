@@ -1,6 +1,6 @@
 // WRWrappaTableViewController.m
 //
-// Copyright (c) 2016 Art Shmatkov
+// Copyright (c) 2015 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,21 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRWrappaCollectionViewController.h"
-#import "WRWrappaCollectionView.h"
+#import "WRWrappaTableViewController.h"
+#import "WRWrappaTableView.h"
 #import "Wrappa.h"
-#import "WRRectangleCell.h"
-#import "WRRectangleCellSource.h"
-#import "WRCollectionHeaderView.h"
+#import "WRTextCell.h"
+#import "WRTextCellSource.h"
+#import "WRTableCellDelegate.h"
 
-@interface WRWrappaCollectionViewController () <UIScrollViewDelegate>
+@interface WRWrappaTableViewController () <UIScrollViewDelegate, WRTableCellDelegate>
 
-@property (strong, nonatomic) IBOutlet WRWrappaCollectionView *myView;
-@property (strong, nonatomic) WRCollectionSource *dataSource;
+@property (strong, nonatomic) IBOutlet WRWrappaTableView *myView;
+@property (strong, nonatomic) WRTableSource *dataSource;
 
 @end
 
-@implementation WRWrappaCollectionViewController
+@implementation WRWrappaTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,90 +42,81 @@
 }
 
 - (void)setup {
-    [self.myView registerCellClass:WRRectangleCell.class];
-    [self.myView registerHeaderClass:WRCollectionHeaderView.class];
-    [self.myView registerFooterClass:WRCollectionHeaderView.class];
+    [self.myView registerClass:WRTextCell.class];
     
-    WRCollectionSource *collectionSource = [WRCollectionSource new];
-    self.myView.source = collectionSource;
-    WRRectangleCellSource *source = nil;
-    WRCollectionSection *sectionModel = nil;
+    WRTableSource *tableSource = [WRTableSource new];
+    self.myView.source = tableSource;
+    WRTextCellSource *source = nil;
+    WRTableSection *sectionModel = nil;
     
     // first section
     
-    sectionModel = [WRCollectionSection new];
+    sectionModel = [WRTableSection new];
     
-    source = [WRRectangleCellSource new];
-    source.rectColor = [self randomColor];
-    source.headerColor = [UIColor greenColor];
-    source.referenceSizeForHeader = CGSizeMake(10, 30);
-    source.headerTitle = @"Header 1";
+    source = [WRTextCellSource new];
+    source.title = @"First cell";
+    source.headerTitle = @"First Header";
+    source.headerViewHeight = 30;
+    source.delegate = self;
     [sectionModel addSource:source];
     
-    source = [WRRectangleCellSource new];
-    source.rectColor = [self randomColor];
+    source = [WRTextCellSource new];
+    source.title = @"Second cell";
+    source.delegate = self;
     [sectionModel addSource:source];
     
-    source = [WRRectangleCellSource new];
-    source.rectColor = [self randomColor];
-    [sectionModel addSource:source];
-    
-    [collectionSource addSection:sectionModel];
+    [tableSource addSection:sectionModel];
     
     // second section
     
-    sectionModel = [WRCollectionSection new];
+    sectionModel = [WRTableSection new];
     
-    source = [WRRectangleCellSource new];
-    source.rectColor = [self randomColor];
-    source.headerColor = [UIColor yellowColor];
-    source.referenceSizeForHeader = CGSizeMake(10, 30);
-    source.headerTitle = @"Header 2";
+    source = [WRTextCellSource new];
+    source.title = @"Third cell";
+    source.headerTitle = @"Second Header";
+    source.headerViewHeight = 30;
+    source.delegate = self;
     [sectionModel addSource:source];
     
-    source = [WRRectangleCellSource new];
-    source.rectColor = [self randomColor];
+    source = [WRTextCellSource new];
+    source.title = @"Fourth cell";
+    source.delegate = self;
     [sectionModel addSource:source];
     
-    source = [WRRectangleCellSource new];
-    source.rectColor = [self randomColor];
-    [sectionModel addSource:source];
-    
-    [collectionSource addSection:sectionModel];
+    [tableSource addSection:sectionModel];
     
     // third section
     
-    sectionModel = [WRCollectionSection new];
+    sectionModel = [WRTableSection new];
     
-    for (int i = 7; i < 100; i++) {
-        source = [WRRectangleCellSource new];
-        source.rectColor = [self randomColor];
+    source = [WRTextCellSource new];
+    source.title = @"Fifth cell";
+    source.headerTitle = @"Third Header";
+    source.headerViewHeight = 30;
+    source.delegate = self;
+    [sectionModel addSource:source];
+    
+    for (int i = 6; i < 100; i++) {
+        source = [WRTextCellSource new];
+        source.title = [NSString stringWithFormat:@"Cell #%d", i];
+        source.delegate = self;
         [sectionModel addSource:source];
     }
     
-    source = (WRRectangleCellSource *)[sectionModel sourceForRow:0];
-    source.headerColor = [UIColor grayColor];
-    source.footerColor = [UIColor redColor];
-    source.referenceSizeForHeader = CGSizeMake(10, 30);
-    source.headerTitle = @"Header 3";
-    source.referenceSizeForFooter = CGSizeMake(10, 30);
-    source.footerTitle = @"Footer";
-    
-    [collectionSource addSection:sectionModel];
-    collectionSource.scrollViewDelegate = self;
+    [tableSource addSection:sectionModel];
+    tableSource.scrollViewDelegate = self;
     
     // reload
     
-    self.dataSource = collectionSource;
+    self.dataSource = tableSource;
     [self.myView reloadData];
 }
 
-- (UIColor *)randomColor {
-    u_int32_t red = arc4random_uniform(256);
-    u_int32_t green = arc4random_uniform(256);
-    u_int32_t blue = arc4random_uniform(256);
-    u_int32_t multiplier = arc4random_uniform(3);
-    return [UIColor colorWithRed:(red / multiplier) / 255.0  green:(green / multiplier) / 255.0 blue:(blue / multiplier) / 255.0 alpha:1.0];
+#pragma mark - WRTableCellDelegate
+
+- (void)touchedCell:(WRCollectionCell *)cell withSource:(WRCollectionCellSource *)source {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cell selected!" message:source.title delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 #pragma mark - UIScrollViewDelegate

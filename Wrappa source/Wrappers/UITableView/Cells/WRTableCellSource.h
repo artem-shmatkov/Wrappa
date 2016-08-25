@@ -20,14 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRTableCellSourceProtocol.h"
+#import "WRTableCellDelegate.h"
 #import "WRTableCellProtocol.h"
 #import "WRBaseCellSource.h"
 #import "WRTableCell.h"
 
 @interface WRTableCellSource : WRBaseCellSource
 
-@property (nonatomic, weak) id <WRTableCellSourceProtocol> delegate;
+@property (nonatomic, weak) id <WRTableCellDelegate> delegate;
 @property (nonatomic, weak) id <WRTableCellProtocol> cell;
 
 @property (nonatomic, copy) NSString *footerTitle;
@@ -39,14 +39,16 @@
 @property (nonatomic, strong) UIView *cellView;
 
 @property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat estimatedHeight;
 @property (nonatomic, assign) CGFloat headerViewHeight;
 @property (nonatomic, assign) CGFloat footerViewHeight;
-
-@property (nonatomic, strong) id buttonTarget;
-@property (nonatomic, assign) SEL buttonSelector;
 
 @property (nonatomic, assign) BOOL showSeparator;
 @property (nonatomic, assign) BOOL selected;
 @property (nonatomic, assign) BOOL shouldHighlight;
+@property (nonatomic, assign) BOOL shouldIndent;
+
+@property (nonatomic, assign) UITableViewCellEditingStyle editingStyle;
+@property (nonatomic, assign) UITableViewCellAccessoryType accessoryType;
 
 @end

@@ -300,11 +300,6 @@
 				CLASSPREFIX = "";
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zakhej.com;
-				TargetAttributes = {
-					A41929C7B4A3B343F1CAAF4F = {
-						DevelopmentTeam = 5XKPBQ9WWB;
-					};
-				};
 			};
 			buildConfigurationList = 423A4EBE41578256CDE9AF23 /* Build configuration list for PBXProject "Wrappa Example" */;
 			compatibilityVersion = "Xcode 3.2";

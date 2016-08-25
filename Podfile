@@ -3,12 +3,10 @@ inhibit_all_warnings!
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Wrappa Example' do
-    pod 'AFNetworking',         '~> 2.5.4'
-    pod 'Mantle',               '~> 2.0.3'
     pod 'libextobjc',           '~> 0.4.1'
     pod 'SDWebImage',           '~> 3.7.2'
-    #    pod 'Wrappa'
+    pod 'Wrappa'
     
     # development pod
-    pod 'Wrappa',               :path => '../../'
+    #    pod 'Wrappa',               :path => '.'
 end

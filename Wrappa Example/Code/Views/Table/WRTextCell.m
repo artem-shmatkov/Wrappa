@@ -22,14 +22,24 @@
 
 #import "WRTextCell.h"
 
-@interface WRTextCell () 
+@interface WRTextCell ()
+
+@property (weak, nonatomic) WRTextCellSource *source;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
 @implementation WRTextCell
 
 - (void)setSource:(WRTextCellSource *)source {
-    self.textLabel.text = source.title;
+    _source = source;
+    self.label.text = source.title;
+}
+
+- (IBAction)buttonTouched:(id)sender {
+    if (self.source.delegate && [self.source.delegate respondsToSelector:@selector(touchedCell:withSource:)]) {
+        [self.source.delegate touchedCell:self withSource:self.source];
+    }
 }
 
 @end

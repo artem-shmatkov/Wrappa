@@ -22,15 +22,9 @@
 
 @class WRCollectionCellSource;
 
-/**
- Cell protocol.
- */
 @protocol WRCollectionCellProtocol <NSObject>
 
 @required
 - (void)setSource:(WRCollectionCellSource *)source;
-
-@optional
-- (void)setActive;
 
 @end
