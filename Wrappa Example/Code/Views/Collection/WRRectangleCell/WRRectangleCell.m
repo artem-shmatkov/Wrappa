@@ -1,4 +1,4 @@
-// WRCollectionHeaderView.h
+// WRRectangleCell.m
 //
 // Copyright (c) 2016 zakhej.com
 //
@@ -20,12 +20,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRCollectionCellSource.h"
-#import "WRCollectionCell.h"
-#import "WRRectangleCellSource.h"
+#import "WRRectangleCell.h"
 
-@interface WRCollectionHeaderView : UICollectionReusableView <WRCollectionCellProtocol>
+@interface WRRectangleCell ()
 
-- (void)setSource:(WRRectangleCellSource *)source;
+@property (weak, nonatomic) IBOutlet UIView *rectView;
+
+@end
+
+@implementation WRRectangleCell
+
+- (void)setSource:(WRRectangleCellSource *)source {
+    self.rectView.backgroundColor = source.rectColor;
+}
 
 @end

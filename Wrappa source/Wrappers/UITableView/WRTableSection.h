@@ -25,7 +25,7 @@
 
 @interface WRTableSection : WRBaseSection
 
-@property (nonatomic, readonly) NSArray<NSString *> *indexTitles;
+@property (nonatomic, readonly, nullable) NSArray<NSString *> *indexTitles;
 
 - (void)setIndexTitles:(nullable NSArray<NSString *> *)indexTitles;
 - (void)addEmptySpaceWithHeight:(CGFloat)height;

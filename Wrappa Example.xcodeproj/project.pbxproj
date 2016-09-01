@@ -26,6 +26,9 @@
 		E00AC7931D5279BD00AB72CC /* WRRectangleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00AC7921D5279BD00AB72CC /* WRRectangleCell.xib */; };
 		E00AC7961D527A8F00AB72CC /* WRRectangleCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E00AC7951D527A8F00AB72CC /* WRRectangleCellSource.m */; };
 		E04829251B6F9BF700E3A679 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04829241B6F9BF700E3A679 /* Storyboard.storyboard */; };
+		E0653E991D75D7C100013B6C /* WRImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0653E981D75D7C100013B6C /* WRImageCell.m */; };
+		E0653E9C1D75D7D100013B6C /* WRImageCellSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E0653E9B1D75D7D100013B6C /* WRImageCellSource.m */; };
+		E0653E9E1D75D7DF00013B6C /* WRImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0653E9D1D75D7DF00013B6C /* WRImageCell.xib */; };
 		E0E9CE401B6E579600934684 /* WRWrappaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CE3F1B6E579600934684 /* WRWrappaTableViewController.m */; };
 		E1D5406B933B7233E615C689 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA447B849250EF9AB8C1D5B /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +66,11 @@
 		E00AC7941D527A8F00AB72CC /* WRRectangleCellSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRRectangleCellSource.h; sourceTree = "<group>"; };
 		E00AC7951D527A8F00AB72CC /* WRRectangleCellSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRRectangleCellSource.m; sourceTree = "<group>"; };
 		E04829241B6F9BF700E3A679 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		E0653E971D75D7C100013B6C /* WRImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRImageCell.h; sourceTree = "<group>"; };
+		E0653E981D75D7C100013B6C /* WRImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRImageCell.m; sourceTree = "<group>"; };
+		E0653E9A1D75D7D100013B6C /* WRImageCellSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRImageCellSource.h; sourceTree = "<group>"; };
+		E0653E9B1D75D7D100013B6C /* WRImageCellSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRImageCellSource.m; sourceTree = "<group>"; };
+		E0653E9D1D75D7DF00013B6C /* WRImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WRImageCell.xib; sourceTree = "<group>"; };
 		E0E9CE3E1B6E579600934684 /* WRWrappaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRWrappaTableViewController.h; sourceTree = "<group>"; };
 		E0E9CE3F1B6E579600934684 /* WRWrappaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRWrappaTableViewController.m; sourceTree = "<group>"; };
 		E63C94B4ED92D29213B22BA0 /* Pods-Wrappa Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wrappa Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wrappa Example/Pods-Wrappa Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,8 +95,8 @@
 		105EE0251527D372798B53B0 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				E04829241B6F9BF700E3A679 /* Storyboard.storyboard */,
 				E007EC3A1D528FD4005AB7D7 /* Launch Screen.storyboard */,
+				E04829241B6F9BF700E3A679 /* Storyboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -98,8 +106,8 @@
 			children = (
 				473C83743C9A186C886B6E95 /* Wrappa Example */,
 				A930A685A52ED2C69418F596 /* Frameworks */,
-				D0C8C873D82185BDB6AA240C /* Products */,
 				BEA10865E7741573B2B27692 /* Pods */,
+				D0C8C873D82185BDB6AA240C /* Products */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -153,10 +161,10 @@
 		88F613FB3AA4E880F9259ACF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E0E9CE3E1B6E579600934684 /* WRWrappaTableViewController.h */,
-				E0E9CE3F1B6E579600934684 /* WRWrappaTableViewController.m */,
 				E00AC76E1D5262BF00AB72CC /* WRWrappaCollectionViewController.h */,
 				E00AC76F1D5262BF00AB72CC /* WRWrappaCollectionViewController.m */,
+				E0E9CE3E1B6E579600934684 /* WRWrappaTableViewController.h */,
+				E0E9CE3F1B6E579600934684 /* WRWrappaTableViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -174,8 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				240CC61D60CBAF072FA4AD0F /* Images */,
-				105EE0251527D372798B53B0 /* Storyboards */,
 				F7D31E8BE18A9DA97316BA49 /* Other */,
+				105EE0251527D372798B53B0 /* Storyboards */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -222,16 +230,13 @@
 		E00AC77C1D526BAC00AB72CC /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				E00AC78F1D5279A200AB72CC /* WRRectangleCell.h */,
-				E00AC7901D5279A200AB72CC /* WRRectangleCell.m */,
-				E00AC7921D5279BD00AB72CC /* WRRectangleCell.xib */,
-				E00AC7941D527A8F00AB72CC /* WRRectangleCellSource.h */,
-				E00AC7951D527A8F00AB72CC /* WRRectangleCellSource.m */,
-				E00AC7891D526C7000AB72CC /* WRWrappaCollectionView.h */,
-				E00AC78A1D526C7000AB72CC /* WRWrappaCollectionView.m */,
+				E0653EA01D75D7FB00013B6C /* WRImageCell */,
+				E0653E9F1D75D7EF00013B6C /* WRRectangleCell */,
 				E007EC431D534902005AB7D7 /* WRCollectionHeaderView.h */,
 				E007EC441D534902005AB7D7 /* WRCollectionHeaderView.m */,
 				E007EC411D5348CB005AB7D7 /* WRCollectionHeaderView.xib */,
+				E00AC7891D526C7000AB72CC /* WRWrappaCollectionView.h */,
+				E00AC78A1D526C7000AB72CC /* WRWrappaCollectionView.m */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -248,6 +253,30 @@
 				E00AC7841D526BAC00AB72CC /* WRWrappaTableView.m */,
 			);
 			path = Table;
+			sourceTree = "<group>";
+		};
+		E0653E9F1D75D7EF00013B6C /* WRRectangleCell */ = {
+			isa = PBXGroup;
+			children = (
+				E00AC78F1D5279A200AB72CC /* WRRectangleCell.h */,
+				E00AC7901D5279A200AB72CC /* WRRectangleCell.m */,
+				E00AC7921D5279BD00AB72CC /* WRRectangleCell.xib */,
+				E00AC7941D527A8F00AB72CC /* WRRectangleCellSource.h */,
+				E00AC7951D527A8F00AB72CC /* WRRectangleCellSource.m */,
+			);
+			path = WRRectangleCell;
+			sourceTree = "<group>";
+		};
+		E0653EA01D75D7FB00013B6C /* WRImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				E0653E971D75D7C100013B6C /* WRImageCell.h */,
+				E0653E981D75D7C100013B6C /* WRImageCell.m */,
+				E0653E9D1D75D7DF00013B6C /* WRImageCell.xib */,
+				E0653E9A1D75D7D100013B6C /* WRImageCellSource.h */,
+				E0653E9B1D75D7D100013B6C /* WRImageCellSource.m */,
+			);
+			path = WRImageCell;
 			sourceTree = "<group>";
 		};
 		EFD64E2F44AB9E0E530AB2B9 /* Supporting Files */ = {
@@ -327,6 +356,7 @@
 				E00AC7861D526BAC00AB72CC /* WRTextCell.xib in Resources */,
 				1475A23092E706510ADFD3A1 /* Images.xcassets in Resources */,
 				E00AC7931D5279BD00AB72CC /* WRRectangleCell.xib in Resources */,
+				E0653E9E1D75D7DF00013B6C /* WRImageCell.xib in Resources */,
 				E007EC3B1D528FD4005AB7D7 /* Launch Screen.storyboard in Resources */,
 				E04829251B6F9BF700E3A679 /* Storyboard.storyboard in Resources */,
 			);
@@ -410,7 +440,9 @@
 				2EAF7BF2232056B8C82CEA79 /* main.m in Sources */,
 				E0E9CE401B6E579600934684 /* WRWrappaTableViewController.m in Sources */,
 				E00AC78B1D526C7000AB72CC /* WRWrappaCollectionView.m in Sources */,
+				E0653E9C1D75D7D100013B6C /* WRImageCellSource.m in Sources */,
 				E00AC7881D526BAC00AB72CC /* WRWrappaTableView.m in Sources */,
+				E0653E991D75D7C100013B6C /* WRImageCell.m in Sources */,
 				E00AC7551D5254C100AB72CC /* UITableView+Wrappa.m in Sources */,
 				E00AC7851D526BAC00AB72CC /* WRTextCell.m in Sources */,
 				E00AC7911D5279A200AB72CC /* WRRectangleCell.m in Sources */,

@@ -25,6 +25,8 @@
 #import "Wrappa.h"
 #import "WRRectangleCell.h"
 #import "WRRectangleCellSource.h"
+#import "WRImageCell.h"
+#import "WRImageCellSource.h"
 #import "WRCollectionHeaderView.h"
 
 @interface WRWrappaCollectionViewController () <UIScrollViewDelegate>
@@ -42,6 +44,7 @@
 }
 
 - (void)setup {
+    [self.myView registerCellClass:WRImageCell.class];
     [self.myView registerCellClass:WRRectangleCell.class];
     [self.myView registerHeaderClass:WRCollectionHeaderView.class];
     [self.myView registerFooterClass:WRCollectionHeaderView.class];
@@ -98,9 +101,15 @@
     sectionModel = [WRCollectionSection new];
     
     for (int i = 7; i < 100; i++) {
-        source = [WRRectangleCellSource new];
-        source.rectColor = [self randomColor];
-        [sectionModel addSource:source];
+        if (i % 2) {
+            WRRectangleCellSource *rectSource = [WRRectangleCellSource new];
+            rectSource.rectColor = [self randomColor];
+            [sectionModel addSource:rectSource];
+        } else {
+            WRImageCellSource *imageSource = [WRImageCellSource new];
+            imageSource.imageURL = [self randomImageURL:i];
+            [sectionModel addSource:imageSource];
+        }
     }
     
     source = (WRRectangleCellSource *)[sectionModel sourceForRow:0];
@@ -126,6 +135,10 @@
     u_int32_t blue = arc4random_uniform(256);
     u_int32_t multiplier = arc4random_uniform(3) + 1;
     return [UIColor colorWithRed:(red / multiplier) / 255.0  green:(green / multiplier) / 255.0 blue:(blue / multiplier) / 255.0 alpha:1.0];
+}
+
+- (NSURL *)randomImageURL:(int)number {
+    return [NSURL URLWithString:[NSString stringWithFormat:@"https://placeimg.com/100/100/animals/%d", number]];
 }
 
 #pragma mark - UIScrollViewDelegate

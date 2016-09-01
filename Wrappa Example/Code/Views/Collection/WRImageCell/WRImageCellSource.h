@@ -1,4 +1,4 @@
-// WRCollectionHeaderView.h
+// WRImageCellSource.h
 //
 // Copyright (c) 2016 zakhej.com
 //
@@ -20,12 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRCollectionCellSource.h"
-#import "WRCollectionCell.h"
-#import "WRRectangleCellSource.h"
+#import <Wrappa/Wrappa.h>
 
-@interface WRCollectionHeaderView : UICollectionReusableView <WRCollectionCellProtocol>
+@interface WRImageCellSource : WRCollectionCellSource
 
-- (void)setSource:(WRRectangleCellSource *)source;
+@property (nonatomic, copy) NSURL *imageURL;
 
 @end

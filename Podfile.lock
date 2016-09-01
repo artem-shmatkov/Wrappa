@@ -37,7 +37,7 @@ PODS:
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
-  - Wrappa (0.2.3)
+  - Wrappa (0.2.4)
 
 DEPENDENCIES:
   - libextobjc (~> 0.4.1)
@@ -51,7 +51,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
-  Wrappa: 438163ecdf08c4fc4348e055a196509eeb301388
+  Wrappa: 7b09d4bd5a9af45b23898ac53fd723ff2a024313
 
 PODFILE CHECKSUM: c46c7b7ae95f787637ff4510875cb4424e262030
 

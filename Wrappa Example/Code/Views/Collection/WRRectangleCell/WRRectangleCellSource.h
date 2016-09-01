@@ -1,4 +1,4 @@
-// WRCollectionHeaderView.h
+// WRRectangleCellSource.h
 //
 // Copyright (c) 2016 zakhej.com
 //
@@ -20,12 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRCollectionCellSource.h"
-#import "WRCollectionCell.h"
-#import "WRRectangleCellSource.h"
+#import <Wrappa/Wrappa.h>
 
-@interface WRCollectionHeaderView : UICollectionReusableView <WRCollectionCellProtocol>
+@interface WRRectangleCellSource : WRCollectionCellSource
 
-- (void)setSource:(WRRectangleCellSource *)source;
+@property (nonatomic, copy) UIColor *rectColor;
+@property (nonatomic, copy) UIColor *headerColor;
+@property (nonatomic, copy) UIColor *footerColor;
 
 @end

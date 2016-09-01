@@ -1,4 +1,4 @@
-// WRCollectionHeaderView.h
+// WRImageCellSource.m
 //
 // Copyright (c) 2016 zakhej.com
 //
@@ -20,12 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRCollectionCellSource.h"
-#import "WRCollectionCell.h"
-#import "WRRectangleCellSource.h"
+#import "WRImageCellSource.h"
+#import "WRImageCell.h"
 
-@interface WRCollectionHeaderView : UICollectionReusableView <WRCollectionCellProtocol>
+@implementation WRImageCellSource
 
-- (void)setSource:(WRRectangleCellSource *)source;
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.cellClass = WRImageCell.class.description;
+        self.itemSize = CGSizeMake(100, 100);
+        self.sectionInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+        self.minimumLineSpacing = 5;
+        self.minimumInteritemSpacing = 5;
+    }
+    return self;
+}
 
 @end
