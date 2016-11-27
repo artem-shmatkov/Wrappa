@@ -20,6 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+@class WRBaseSection;
+
 @protocol WRBaseSourceProtocol <NSObject>
 
 @property (nonatomic, strong) NSMutableArray <WRBaseSection *> *sections;
