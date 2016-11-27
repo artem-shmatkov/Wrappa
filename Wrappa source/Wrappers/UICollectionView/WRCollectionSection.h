@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "WRBaseSection.h"
-#import "WRCollectionCellSource.h"
 
 @interface WRCollectionSection : WRBaseSection
 

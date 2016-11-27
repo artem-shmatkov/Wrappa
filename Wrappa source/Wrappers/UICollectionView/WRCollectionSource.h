@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "WRBaseSource.h"
-#import "WRCollectionSection.h"
 
 @interface WRCollectionSource : WRBaseSource <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 

@@ -32,7 +32,7 @@
     return self;
 }
 
-- (void)addSection:(WRBaseSection *)section {
+- (void)addSection:(id <WRBaseSectionProtocol>)section {
     [_sections addObject:section];
 }
 
@@ -44,9 +44,9 @@
     NSInteger section = 0;
     NSUInteger row = 0;
     
-    for (WRBaseSection *sectionModel in _sections) {
+    for (id <WRBaseSectionProtocol> sectionModel in _sections) {
         for (NSUInteger i = 0; i < sectionModel.numberOfRows; i++) {
-            WRBaseCellSource *cellSource = [sectionModel sourceForRow:row];
+            id <WRBaseCellSourceProtocol> cellSource = [sectionModel sourceForRow:row];
             cellSource.indexPath = [NSIndexPath indexPathForRow:row inSection:section];
             row++;
         }
@@ -58,33 +58,33 @@
 
 #pragma mark - Other methods
 
-- (WRBaseCellSource *)sourceForIndexPath:(NSIndexPath *)indexPath {
-    WRBaseSection *sectionModel = _sections[indexPath.section];
-    WRBaseCellSource *cellSource = [sectionModel sourceForRow:indexPath.row];
+- (id <WRBaseCellSourceProtocol>)sourceForIndexPath:(NSIndexPath *)indexPath {
+    id <WRBaseSectionProtocol> sectionModel = _sections[indexPath.section];
+    id <WRBaseCellSourceProtocol> cellSource = [sectionModel sourceForRow:indexPath.row];
     return cellSource;
 }
 
-- (WRBaseCellSource *)headerSourceForSection:(NSUInteger)section {
-    WRBaseSection *sectionModel = _sections[section];
-    WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
+- (id <WRBaseCellSourceProtocol>)headerSourceForSection:(NSUInteger)section {
+    id <WRBaseSectionProtocol> sectionModel = _sections[section];
+    id <WRBaseCellSourceProtocol> cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
-- (WRBaseCellSource *)footerSourceForSection:(NSUInteger)section {
-    WRBaseSection *sectionModel = _sections[section];
-    WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
+- (id <WRBaseCellSourceProtocol>)footerSourceForSection:(NSUInteger)section {
+    id <WRBaseSectionProtocol> sectionModel = _sections[section];
+    id <WRBaseCellSourceProtocol> cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
-- (WRBaseCellSource *)headerViewSourceForSection:(NSUInteger)section {
-    WRBaseSection *sectionModel = _sections[section];
-    WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
+- (id <WRBaseCellSourceProtocol>)headerViewSourceForSection:(NSUInteger)section {
+    id <WRBaseSectionProtocol> sectionModel = _sections[section];
+    id <WRBaseCellSourceProtocol> cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
-- (WRBaseCellSource *)footerViewSourceForSection:(NSUInteger)section {
-    WRBaseSection *sectionModel = _sections[section];
-    WRBaseCellSource *cellSource = [sectionModel sourceForRow:0];
+- (id <WRBaseCellSourceProtocol>)footerViewSourceForSection:(NSUInteger)section {
+    id <WRBaseSectionProtocol> sectionModel = _sections[section];
+    id <WRBaseCellSourceProtocol> cellSource = [sectionModel sourceForRow:0];
     return cellSource;
 }
 
@@ -93,7 +93,7 @@
 }
 
 - (NSInteger)sectionRowsCount:(NSInteger)section {
-    WRBaseSection *sectionModel = _sections[section];
+    id <WRBaseSectionProtocol> sectionModel = _sections[section];
     return sectionModel.numberOfRows;
 }
 

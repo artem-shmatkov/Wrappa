@@ -1,6 +1,6 @@
-// WRTableSectionModel.m
+// WRBaseSectionProtocol.h
 //
-// Copyright (c) 2015 Art Shmatkov
+// Copyright (c) 2016 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,27 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRTableSection.h"
-#import "WRTableCellSource.h"
+@class WRBaseCellSource;
 
-@interface WRTableSection ()
+@protocol WRBaseSectionProtocol <NSObject>
 
-@property (nonatomic, copy) NSArray<NSString *> *indexTitles;
+@property (nonatomic, strong) NSMutableArray<WRBaseCellSource *> *rows;
 
-@end
+- (NSUInteger)numberOfRows;
+- (WRBaseCellSource *)sourceForRow:(NSUInteger)row;
+- (WRBaseCellSource *)sourceForTag:(NSInteger)tag;
 
-@implementation WRTableSection
+- (void)addSource:(WRBaseCellSource *)source;
+- (void)addSources:(NSArray *)sourcesArray;
 
-#pragma mark - Data Source Methods
+- (void)replaceSources:(NSArray *)sourcesArray;
 
-- (void)setIndexTitles:(nullable NSArray<NSString *> *)indexTitles {
-    self.indexTitles = indexTitles;
-}
+- (void)insertSource:(WRBaseCellSource *)source atIndex:(NSUInteger)index;
+- (void)insertSources:(NSArray *)sourcesArray atIndex:(NSUInteger)index;
 
-- (void)addEmptySpaceWithHeight:(CGFloat)height {
-    WRTableCellSource *source = [WRTableCellSource new];
-    source.height = height;
-    [self addSource:source];
-}
+- (void)removeSource:(WRBaseCellSource *)source;
+- (void)removeSourceAtIndex:(NSUInteger)index;
+- (void)removeSourcesAtIndexes:(NSIndexSet *)indexSet;
 
 @end

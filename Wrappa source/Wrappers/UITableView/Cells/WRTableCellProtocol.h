@@ -22,9 +22,6 @@
 
 @class WRTableCellSource;
 
-/**
- Cell protocol.
- */
 @protocol WRTableCellProtocol <NSObject>
 
 @required

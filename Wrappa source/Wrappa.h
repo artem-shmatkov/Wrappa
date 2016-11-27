@@ -26,6 +26,13 @@
 #ifndef _WRAPPA_
 #define _WRAPPA_
 
+#import "WRBaseCellSourceProtocol.h"
+#import "WRBaseSectionProtocol.h"
+#import "WRBaseSourceProtocol.h"
+#import "WRCollectionCellSourceProtocol.h"
+#import "WRTableSectionProtocol.h"
+#import "WRTableCellSourceProtocol.h"
+
 #import "WRBaseCellSource.h"
 #import "WRBaseSection.h"
 #import "WRBaseSource.h"

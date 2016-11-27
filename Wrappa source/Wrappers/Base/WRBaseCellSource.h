@@ -20,7 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@interface WRBaseCellSource : NSObject
+#import "WRBaseCellSourceProtocol.h"
+
+@interface WRBaseCellSource : NSObject <WRBaseCellSourceProtocol>
 
 @property (nonatomic, assign) NSInteger tag;
 

@@ -1,6 +1,6 @@
-// WRTableSectionModel.m
+// WRBaseCellSourceProtocol.h
 //
-// Copyright (c) 2015 Art Shmatkov
+// Copyright (c) 2016 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,27 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRTableSection.h"
-#import "WRTableCellSource.h"
+@protocol WRBaseCellSourceProtocol <NSObject>
 
-@interface WRTableSection ()
+@property (nonatomic, assign) NSInteger tag;
 
-@property (nonatomic, copy) NSArray<NSString *> *indexTitles;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *cellClass;
+@property (nonatomic, copy) NSIndexPath *indexPath;
+@property (nonatomic, copy) UIColor *backgroundColor;
 
-@end
-
-@implementation WRTableSection
-
-#pragma mark - Data Source Methods
-
-- (void)setIndexTitles:(nullable NSArray<NSString *> *)indexTitles {
-    self.indexTitles = indexTitles;
-}
-
-- (void)addEmptySpaceWithHeight:(CGFloat)height {
-    WRTableCellSource *source = [WRTableCellSource new];
-    source.height = height;
-    [self addSource:source];
-}
+@property (nonatomic, assign) BOOL canEdit;
+@property (nonatomic, assign) BOOL canDelete;
+@property (nonatomic, assign) BOOL canMove;
 
 @end

@@ -1,6 +1,6 @@
-// WRTableCellSource.h
+// WRTableCellSourceProtocol.h
 //
-// Copyright (c) 2015 Art Shmatkov
+// Copyright (c) 2016 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,10 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRBaseCellSource.h"
-#import "WRTableCellSourceProtocol.h"
+#import "WRTableCellDelegate.h"
+#import "WRTableCellProtocol.h"
 
-@interface WRTableCellSource : WRBaseCellSource <WRTableCellSourceProtocol>
+@protocol WRTableCellSourceProtocol <NSObject, WRBaseCellSourceProtocol>
 
 @property (nonatomic, weak) id <WRTableCellDelegate> delegate;
 @property (nonatomic, weak) id <WRTableCellProtocol> cell;

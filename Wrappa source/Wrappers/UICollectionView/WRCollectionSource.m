@@ -21,6 +21,8 @@
 // THE SOFTWARE.
 
 #import "WRCollectionSource.h"
+#import "WRCollectionSection.h"
+#import "WRCollectionCellSource.h"
 #import "WRCollectionReusableView.h"
 
 @implementation WRCollectionSource

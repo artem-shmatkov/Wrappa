@@ -1,6 +1,6 @@
-// WRTableSectionModel.m
+// WRBaseSourceProtocol.h
 //
-// Copyright (c) 2015 Art Shmatkov
+// Copyright (c) 2016 Art Shmatkov
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,27 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRTableSection.h"
-#import "WRTableCellSource.h"
+@protocol WRBaseSourceProtocol <NSObject>
 
-@interface WRTableSection ()
+@property (nonatomic, strong) NSMutableArray <WRBaseSection *> *sections;
+@property (nonatomic, weak) id <UIScrollViewDelegate> scrollViewDelegate;
 
-@property (nonatomic, copy) NSArray<NSString *> *indexTitles;
+- (void)addSection:(WRBaseSection *)section;
+- (void)clear;
+- (void)recalculateIndexPaths;
 
-@end
-
-@implementation WRTableSection
-
-#pragma mark - Data Source Methods
-
-- (void)setIndexTitles:(nullable NSArray<NSString *> *)indexTitles {
-    self.indexTitles = indexTitles;
-}
-
-- (void)addEmptySpaceWithHeight:(CGFloat)height {
-    WRTableCellSource *source = [WRTableCellSource new];
-    source.height = height;
-    [self addSource:source];
-}
+- (WRBaseCellSource *)sourceForIndexPath:(NSIndexPath *)indexPath;
+- (WRBaseCellSource *)headerSourceForSection:(NSUInteger)section;
+- (WRBaseCellSource *)footerSourceForSection:(NSUInteger)section;
+- (WRBaseCellSource *)headerViewSourceForSection:(NSUInteger)section;
+- (WRBaseCellSource *)footerViewSourceForSection:(NSUInteger)section;
+- (NSInteger)numberOfSections;
+- (NSInteger)sectionRowsCount:(NSInteger)section;
 
 @end

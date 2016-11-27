@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "WRBaseSource.h"
-#import "WRTableSection.h"
 
 @interface WRTableSource : WRBaseSource <UITableViewDataSource, UITableViewDelegate>
 

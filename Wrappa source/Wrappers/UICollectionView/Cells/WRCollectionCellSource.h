@@ -21,11 +21,9 @@
 // THE SOFTWARE.
 
 #import "WRBaseCellSource.h"
-#import "WRCollectionCellProtocol.h"
-#import "WRBaseCellSource.h"
-#import "WRCollectionCell.h"
+#import "WRCollectionCellSourceProtocol.h"
 
-@interface WRCollectionCellSource : WRBaseCellSource
+@interface WRCollectionCellSource : WRBaseCellSource <WRCollectionCellSourceProtocol>
 
 @property (nonatomic, assign) CGSize itemSize;
 @property (nonatomic, assign) CGSize referenceSizeForHeader;

@@ -21,13 +21,10 @@
 // THE SOFTWARE.
 
 #import "WRBaseSection.h"
-#import "WRTableCellSource.h"
+#import "WRTableSectionProtocol.h"
 
-@interface WRTableSection : WRBaseSection
+@interface WRTableSection : WRBaseSection <WRTableSectionProtocol>
 
 @property (nonatomic, readonly, nullable) NSArray<NSString *> *indexTitles;
-
-- (void)setIndexTitles:(nullable NSArray<NSString *> *)indexTitles;
-- (void)addEmptySpaceWithHeight:(CGFloat)height;
 
 @end

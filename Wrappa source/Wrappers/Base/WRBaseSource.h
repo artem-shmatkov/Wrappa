@@ -21,22 +21,11 @@
 // THE SOFTWARE.
 
 #import "WRBaseSection.h"
+#import "WRBaseSourceProtocol.h"
 
-@interface WRBaseSource : NSObject <UIScrollViewDelegate>
+@interface WRBaseSource : NSObject <UIScrollViewDelegate, WRBaseSourceProtocol>
 
-@property (nonatomic, strong) NSMutableArray *sections;
+@property (nonatomic, strong) NSMutableArray <WRBaseSection *> *sections;
 @property (nonatomic, weak) id <UIScrollViewDelegate> scrollViewDelegate;
-
-- (void)addSection:(WRBaseSection *)section;
-- (void)clear;
-- (void)recalculateIndexPaths;
-
-- (WRBaseCellSource *)sourceForIndexPath:(NSIndexPath *)indexPath;
-- (WRBaseCellSource *)headerSourceForSection:(NSUInteger)section;
-- (WRBaseCellSource *)footerSourceForSection:(NSUInteger)section;
-- (WRBaseCellSource *)headerViewSourceForSection:(NSUInteger)section;
-- (WRBaseCellSource *)footerViewSourceForSection:(NSUInteger)section;
-- (NSInteger)numberOfSections;
-- (NSInteger)sectionRowsCount:(NSInteger)section;
 
 @end

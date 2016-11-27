@@ -20,7 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "WRCollectionCellSource.h"
 #import "WRCollectionCellProtocol.h"
 
 @interface WRCollectionCell : UICollectionViewCell <WRCollectionCellProtocol>

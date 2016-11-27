@@ -21,6 +21,8 @@
 // THE SOFTWARE.
 
 #import "WRTableSource.h"
+#import "WRTableSection.h"
+#import "WRTableCellSource.h"
 
 // TODO: separate rare methods to subclass, i.e. WRHeavyTableSource
 

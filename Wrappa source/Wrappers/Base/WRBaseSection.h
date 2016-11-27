@@ -22,25 +22,10 @@
 
 #import "WRBaseSection.h"
 #import "WRBaseCellSource.h"
+#import "WRBaseSectionProtocol.h"
 
-@interface WRBaseSection : NSObject
+@interface WRBaseSection : NSObject <WRBaseSectionProtocol>
 
-@property (nonatomic, strong) NSMutableArray *rows;
-
-- (NSUInteger)numberOfRows;
-- (WRBaseCellSource *)sourceForRow:(NSUInteger)row;
-- (WRBaseCellSource *)sourceForTag:(NSInteger)tag;
-
-- (void)addSource:(WRBaseCellSource *)source;
-- (void)addSources:(NSArray *)sourcesArray;
-
-- (void)replaceSources:(NSArray *)sourcesArray;
-
-- (void)insertSource:(WRBaseCellSource *)source atIndex:(NSUInteger)index;
-- (void)insertSources:(NSArray *)sourcesArray atIndex:(NSUInteger)index;
-
-- (void)removeSource:(WRBaseCellSource *)source;
-- (void)removeSourceAtIndex:(NSUInteger)index;
-- (void)removeSourcesAtIndexes:(NSIndexSet *)indexSet;
+@property (nonatomic, strong) NSMutableArray<WRBaseCellSource *> *rows;
 
 @end
